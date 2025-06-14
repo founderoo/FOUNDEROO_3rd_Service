@@ -10,14 +10,12 @@ import Ceo from "@/assets/ceo.png";
 import cpo from "@/assets/cpo.png";
 import hr from "@/assets/hr.png";
 import cto from "@/assets/cto.png";
-import NarendraNarayan  from "@/assets/Narendra Narayan.jpg";
+import NarendraNarayan  from "@/assets/Narendra-Narayan.jpg";
 import krish from "@/assets/krish.png";
 import ravi from "@/assets/ravi.jpg";
 
 export default function Home() {
-  const { user, signInWithGoogle } = useAuthStore();
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const { user } = useAuthStore();
   const [openFaq, setOpenFaq] = useState(null);
   const [currentText, setCurrentText] = useState(0);
 
@@ -30,17 +28,7 @@ export default function Home() {
   }, []);
   const navigate = useNavigate();
 
-  const handleGoogleSignIn = async () => {
-    setLoading(true);
-    setError('');
-    try {
-      await signInWithGoogle();
-    } catch (err) {
-      setError('Failed to sign in with Google');
-    } finally {
-      setLoading(false);
-    }
-  };
+ 
 
   const handleApplyNow = () => {
     if (user) {
@@ -69,7 +57,7 @@ export default function Home() {
       image: cpo,
       description: "The Chief People Officer at Founderoo, she brings heart and strategy together.With a background in development and management, she understands both people and systems.Her expertise in marketing, human resource management, and founder evaluation drives real impact.At Brandify & Company, she ensures that every decision begins  and ends  with people.",
       expertise: ["strategy", "marketing", "human resource management"],
-      linkedin: "https://www.linkedin.com/in/tannu-priya-aaa83b2a9?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkI4XfwtFTPG%2F0Uj03Tq9eQ%3D%3D "
+      linkedin: "https://www.linkedin.com/in/tannu-priya-aaa83b2a9/ "
     },
     {
       name: "Kajal Kumari",
@@ -77,7 +65,7 @@ export default function Home() {
       image: hr,
       description: "Kajal has spent nearly 8 years in managing human resources. With her experience she is redefining the way companies approach talent to work for mutual growth by providing a healthy environment where everyone is able to grow in a more Organised way benefitting companies on one hand and nurturing talent on the other.",
       expertise: ["TalentAcquisition", "EmployeeRelations", "HRCompliance"],
-      linkedin: "https://www.linkedin.com/in/kajal-kumari-a1048b1b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+      linkedin: "https://www.linkedin.com/in/kajal-kumari-a1048b1b1/ "
     },
     {
       name: "Mukesh JHA",
@@ -85,7 +73,7 @@ export default function Home() {
       image: cto,
       description: "He is a seasoned Blockchain enthusiast with nearly a decade of hands-on experience in the crypto space. An alumnus of Motilal Nehru National Institute of Technology, Mukesh blends deep technical knowledge in offering Blockchain services. Worked on 10+ startup ideas he knows well how Technology can help early stage startups to grow in a sustainable manner.",
       expertise: ["TechArchitecture", "SystemScalability", "EngineeringLeadership", "Blockchain"],
-      linkedin: "https://www.linkedin.com/in/mukeshly/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      linkedin: "https://www.linkedin.com/in/mukeshly/"
     }
   ];
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
+import { Input } from './ui/input';
 import { useToast } from './ui/use-toast';
 import { auth } from '../firebase';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
@@ -66,6 +67,18 @@ export function FounderForm() {
   };
 
   const handleSubmit = async () => {
+    // Basic phone number validation
+    const phone = answers.phoneNumber.trim();
+    // Accepts numbers, spaces, dashes, parentheses, and plus sign, 7-15 chars
+    const phonePattern = /^[0-9+\-() ]{7,15}$/;
+    if (!phonePattern.test(phone)) {
+      toast({
+        title: 'Invalid Phone Number',
+        description: 'Please enter a valid phone number (7-15 digits, numbers and symbols only).',
+        variant: 'destructive',
+      });
+      return;
+    }
     try {
       const userId = auth.currentUser.uid;
       await setDoc(doc(db, 'users', userId), {
@@ -111,12 +124,25 @@ export function FounderForm() {
 
       <div className="space-y-4">
         <h3 className="text-lg font-medium">{currentQuestion.question}</h3>
-        <Textarea
-          value={answers[currentQuestion.id]}
-          onChange={(e) => handleAnswerChange(currentQuestion.id, e.target.value)}
-          placeholder="Type your answer here..."
-          className="min-h-[150px]"
-        />
+        {currentQuestion.id === 'phoneNumber' ? (
+          <Input
+            type="tel"
+            value={answers.phoneNumber}
+            onChange={e => handleAnswerChange('phoneNumber', e.target.value)}
+            placeholder="Enter your phone number"
+            pattern="[0-9+\-() ]{7,15}"
+            maxLength={15}
+            className="min-h-[40px]"
+            required
+          />
+        ) : (
+          <Textarea
+            value={answers[currentQuestion.id]}
+            onChange={(e) => handleAnswerChange(currentQuestion.id, e.target.value)}
+            placeholder="Type your answer here..."
+            className="min-h-[150px]"
+          />
+        )}
 
         <div className="flex justify-between pt-4">
           {step > 1 && (
