@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { useAuthStore } from "@/store/auth";
 import { ChevronDown, Star, Users, Target, Rocket, CheckCircle, ArrowRight, Linkedin, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import Ceo from "@/assets/ceo.png";
+import Ceo from "@/assets/Ceo.png";
 import cpo from "@/assets/cpo.png";
 import hr from "@/assets/hr.png";
 import cto from "@/assets/cto.png";
