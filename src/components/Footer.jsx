@@ -18,18 +18,18 @@ export function Footer() {
               Your success is our mission.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              {/* <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter size={20} />
-              </a>
+              </a> */}
               <a href="https://www.linkedin.com/company/founderoo-circle/" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              {/* <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -53,7 +53,7 @@ export function Footer() {
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Our Team</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Careers</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Blog</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">News</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Newsletter</a></li>
             </ul>
           </div>
 

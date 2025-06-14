@@ -20,17 +20,17 @@ export function Navbar() {
           <nav className="flex items-center gap-6">
             <div className="md:flex items-center gap-6 hidden">
               <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Home
+                Startup Planner
               </Link>
-              <a href="#team" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Team
-              </a>
-              <a href="#about" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                About Us
-              </a>
-              <a href="#success-stories" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Success Stories
-              </a>
+              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
+                Founder Docs
+              </Link>
+             <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
+                Tasks
+              </Link>
+              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
+                Ask Founderoo
+              </Link>
               {!user && (
                 <Link
                   to="/register"
@@ -73,26 +73,26 @@ export function Navbar() {
             to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            Home
+            Startup Planner
           </Link>
-          <a
-            href="#team"
+          <Link
+            to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            Team
-          </a>
-          <a
-            to="#about"
+            Founder Docs
+          </Link>
+           <Link
+            to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            About Us
-          </a>
-          <a
-            to="#success-stories"
+            Tasks
+          </Link>
+           <Link
+            to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            Success Stories
-          </a>
+            Ask Founderoo
+          </Link>
          
           {!user && (
             <Link

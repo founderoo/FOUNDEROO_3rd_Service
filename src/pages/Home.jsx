@@ -10,7 +10,7 @@ import Ceo from "@/assets/Ceo.png";
 import cpo from "@/assets/cpo.png";
 import hr from "@/assets/hr.png";
 import cto from "@/assets/cto.png";
-import NarendraNarayan  from "@/assets/Narendra-Narayan.jpg";
+import NarendraNarayan from "@/assets/Narendra-Narayan.jpg";
 import krish from "@/assets/krish.png";
 import ravi from "@/assets/ravi.jpg";
 
@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
   const navigate = useNavigate();
 
- 
+
 
   const handleApplyNow = () => {
     if (user) {
@@ -48,14 +48,14 @@ export default function Home() {
       role: "Founder & CEO",
       image: Ceo,
       description: "Ramanand is the visionary behind the Founderoo. With a sharp eye for innovation and deep understanding of startup's future he is dedicatedly contributing towards Bihar’s changing startup ecosystem. Bold, strategic and always future focused, he is igniting a movement of Brand - first entrepreneurship.",
-      expertise: ["CompanyVision", "Leadership", "Fundraising","Branding", "Market Research"],
+      expertise: ["CompanyVision", "Leadership", "Fundraising", "Branding", "Market Research"],
       linkedin: "https://www.linkedin.com/in/ramanand-thakur"
     },
     {
       name: "Tannu Priya",
       role: "CPO",
       image: cpo,
-      description: "The Chief People Officer at Founderoo, she brings heart and strategy together.With a background in development and management, she understands both people and systems.Her expertise in marketing, human resource management, and founder evaluation drives real impact.At Brandify & Company, she ensures that every decision begins  and ends  with people.",
+      description: "The Chief People Officer at Founderoo, she brings heart and strategy together.With a background in development and management, she understands both people and systems.Her expertise in marketing, human resource management, and founder evaluation drives real impact.At Founderoo, she ensures that every decision begins  and ends  with people.",
       expertise: ["strategy", "marketing", "human resource management"],
       linkedin: "https://www.linkedin.com/in/tannu-priya-aaa83b2a9/ "
     },
@@ -103,25 +103,100 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-center flex flex-col items-center justify-center min-h-[400px]">
             <h1 className="text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem] font-bold mb-6">
-              <div className="text-primary">Got An Idea ?</div>
-              <div className="mt-4">
-                <TypewriterEffectSmooth
-                  words={[
-                    { text: currentText === 0 ? "Get Funded." : "Direction for every dream.", className: "text-foreground" }
-                  ]}
-                  cursorClassName="bg-primary"
-                  key={currentText} // Force re-render to restart animation
-                />
-              </div>
+              <div className="text-foreground">The Operating System</div>
+              <div className="text-foreground mt-2">for Founders</div>
             </h1>
-            <p className="text-xl sm:text-2xl text-muted-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
-              Start your founder journey with Founderoo. We support idea-stage founders with capital, coaching, and connections.
+            <p className="text-3xl sm:text-4xl text-muted-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
+              <TypewriterEffectSmooth
+                className="text-3xl sm:text-4xl"
+                words={[
+                  { text: "Direction", className: "text-muted-foreground/90" },
+                  { text: "for", className: "text-muted-foreground/90" },
+                  { text: "Every", className: "text-muted-foreground/90" },
+                  { text: "Dream", className: "text-muted-foreground/90" }
+                ]}
+                cursorClassName="bg-primary"
+              />
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-yellow-400 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200" onClick={handleApplyNow}>
-                Pay ₹499 & Apply Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <button
+                onClick={handleApplyNow}
+                className="bg-primary text-primary-foreground hover:bg-yellow-400 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 rounded-lg flex items-center gap-2"
+              >
+                Get Started
+                <ArrowRight className="h-5 w-5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Feature Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
+            {/* Startup Planner */}
+            <div className="flex items-start gap-4 p-6 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="grid grid-cols-2 gap-1">
+                  <div className="w-2 h-2 bg-white rounded-sm"></div>
+                  <div className="w-2 h-2 bg-white rounded-sm"></div>
+                  <div className="w-2 h-2 bg-white rounded-sm"></div>
+                  <div className="w-2 h-2 bg-white rounded-sm"></div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Startup Planner</h3>
+                <p className="text-muted-foreground">Map out your business model and startup roadmap</p>
+              </div>
+            </div>
+
+            {/* Founder Docs */}
+            <div className="flex items-start gap-4 p-6 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-6 h-6 border-2 border-white rounded flex flex-col">
+                  <div className="flex-1 border-b border-white"></div>
+                  <div className="flex-1 border-b border-white"></div>
+                  <div className="flex-1"></div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Founder Docs</h3>
+                <p className="text-muted-foreground">Generate and manage your key startup documents</p>
+              </div>
+            </div>
+
+            {/* Tasks */}
+            <div className="flex items-start gap-4 p-6 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-1">
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
+                    <div className="w-3 h-0.5 bg-white rounded"></div>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
+                    <div className="w-3 h-0.5 bg-white rounded"></div>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
+                    <div className="w-3 h-0.5 bg-white rounded"></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Tasks</h3>
+                <p className="text-muted-foreground">Organize and track your to-dos and milestones</p>
+              </div>
+            </div>
+
+            {/* Ask Founderoo */}
+            <div className="flex items-start gap-4 p-6 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur-sm">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Ask Founderoo</h3>
+                <p className="text-muted-foreground">Get answers and advice from our AI assistant</p>
+              </div>
             </div>
           </div>
         </div>
@@ -134,7 +209,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-foreground mb-4">How Founderoo Works</h2>
             <p className="text-xl text-muted-foreground">Three simple steps to turn your idea into a funded startup</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -192,7 +267,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-foreground mb-4">Success Stories</h2>
             <p className="text-xl text-muted-foreground">Hear from founders who turned their ideas into thriving businesses with Founderoo's support</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -203,7 +278,7 @@ export default function Home() {
               },
               {
                 name: "Krish",
-                role: "CEO, Board ki padhai", 
+                role: "CEO, Board ki padhai",
                 story: "I was just a college student with an Board tutoring idea. Founderoo not only funded us with ₹10 lakhs but connected me with ED-tech industry veterans who helped refine our product. We now have 50,000+ users!",
                 avatar: krish
               },
@@ -243,7 +318,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-foreground mb-4">Meet the Team</h2>
             <p className="text-xl text-muted-foreground">The experienced professionals behind your startup success</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-border/50 shadow-lg overflow-hidden bg-card/95 backdrop-blur-sm">
@@ -287,20 +362,19 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-muted-foreground">Everything you need to know about the application process</p>
           </div>
-          
+
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <Card key={index} className="transition-all duration-300 hover:shadow-lg border border-border/50 shadow-md bg-card/95 backdrop-blur-sm">
-                <CardHeader 
+                <CardHeader
                   className="cursor-pointer hover:bg-muted/50 transition-colors duration-200"
                   onClick={() => toggleFaq(index)}
                 >
                   <div className="flex justify-between items-center">
                     <CardTitle className="text-lg font-semibold text-foreground">{faq.question}</CardTitle>
-                    <ChevronDown 
-                      className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${
-                        openFaq === index ? 'rotate-180' : ''
-                      }`} 
+                    <ChevronDown
+                      className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''
+                        }`}
                     />
                   </div>
                 </CardHeader>

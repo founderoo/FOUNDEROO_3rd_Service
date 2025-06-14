@@ -97,15 +97,18 @@ export const TypewriterEffectSmooth = ({
       <div>
         {wordsArray.map((word, idx) => {
           return (
-            <div key={`word-${idx}`} className="inline-block">
-              {word.text.map((char, index) => (
-                <span
-                  key={`char-${index}`}
-                  className={cn(`dark:text-white text-black `, word.className)}>
-                  {char}
-                </span>
-              ))}
-            </div>
+            <>
+              <div key={`word-${idx}`} className="inline-block">
+                {word.text.map((char, index) => (
+                  <span
+                    key={`char-${index}`}
+                    className={cn(`dark:text-white text-black `, word.className)}>
+                    {char}
+                  </span>
+                ))}
+              </div>
+              <span className="inline-block w-3"></span>
+            </>
           );
         })}
       </div>
@@ -128,7 +131,7 @@ export const TypewriterEffectSmooth = ({
           delay: 0.5,
         }}>
         <div
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold"
+          className="text-3xl sm:text-4xl font-medium inline-block"
           style={{
             whiteSpace: "nowrap",
           }}>
