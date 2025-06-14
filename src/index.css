@@ -84,3 +84,14 @@
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-out;
 }
+@keyframes rocket {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-4px) rotate(-2deg); }
+  50%  { transform: translateY(-8px) rotate(2deg); }
+  75%  { transform: translateY(-4px) rotate(-1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.animate-rocket {
+  animation: rocket 1s infinite ease-in-out;
+}
