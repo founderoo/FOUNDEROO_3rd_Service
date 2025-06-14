@@ -4,7 +4,7 @@ import { X } from 'lucide-react';
 export default function ComingSoonModal({ onClose }) {
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center px-4">
-     <div className="bg-[#0f0f0f] text-white rounded-lg shadow-xl max-w-md w-full relative p-8 text-center animate-fadeIn">
+      <div className="bg-[#0f0f0f] text-white rounded-lg shadow-xl max-w-md w-full relative p-8 text-center animate-fadeIn">
 
         {/* Close Button */}
         <button
@@ -25,8 +25,8 @@ export default function ComingSoonModal({ onClose }) {
           Stay tuned for updates as we develop this exciting new capability!
         </p>
 
-        {/* Emoji / Icon */}
-        <div className="text-4xl mb-6">🚀</div>
+        {/* Animated Rocket */}
+        <div className="text-4xl mb-6 animate-rocket">🚀</div>
 
         {/* CTA Button */}
         <button
@@ -39,3 +39,4 @@ export default function ComingSoonModal({ onClose }) {
     </div>
   );
 }
+
