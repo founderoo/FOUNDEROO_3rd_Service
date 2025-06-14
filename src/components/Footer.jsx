@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram,MessageCircleCodeIcon  } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -11,6 +11,9 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">Founderoo</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
+              The Operating System for Founders.
+            </p>
+            <p className="text-gray-300 text-sm leading-relaxed">
               Building innovative solutions that help businesses grow and thrive in the digital age. 
               Your success is our mission.
             </p>
@@ -21,7 +24,7 @@ export function Footer() {
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/founderoo-circle/" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -61,21 +64,21 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin size={16} className="text-gray-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-sm">
-                  123 Business Street<br />
-                  Suite 100<br />
-                  City, State 12345
+                  Amity University <br />
+                  Police Station, Bailey Rd, near Rupaspur, Rupaspur, Kaliket Nagar<br />
+                  Patna, Bihar 801503
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-gray-400 flex-shrink-0" />
+                <MessageCircleCodeIcon size={16} className="text-gray-400 flex-shrink-0" />
                 <a href="tel:+1234567890" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  +1 (234) 567-8900
+                  +91 7970931573
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-gray-400 flex-shrink-0" />
                 <a href="mailto:hello@founderoo.com" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  hello@founderoo.com
+                  member@founderoo.in
                 </a>
               </div>
             </div>
@@ -100,7 +103,7 @@ export function Footer() {
               <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
               </a>
-              <a href="https://github.com/Garvit1000/create-vite-shadcn-app" className="text-sm text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/founderoo" className="text-sm text-gray-400 hover:text-white transition-colors">
                 GitHub
               </a>
             </div>

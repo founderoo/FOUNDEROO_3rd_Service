@@ -1,17 +1,33 @@
 import { Button } from "@/components/ui/button";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAuthStore } from "@/store/auth";
 import { ChevronDown, Star, Users, Target, Rocket, CheckCircle, ArrowRight, Linkedin, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { toast } from "@/components/ui/use-toast";
+import Ceo from "@/assets/ceo.png";
+import cpo from "@/assets/cpo.png";
+import hr from "@/assets/hr.png";
+import cto from "@/assets/cto.png";
+import NarendraNarayan  from "@/assets/Narendra Narayan.jpg";
+import krish from "@/assets/krish.png";
+import ravi from "@/assets/ravi.jpg";
 
 export default function Home() {
   const { user, signInWithGoogle } = useAuthStore();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [openFaq, setOpenFaq] = useState(null);
+  const [currentText, setCurrentText] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentText(prev => (prev === 0 ? 1 : 0));
+    }, 4000); // Switch every 4 seconds
+
+    return () => clearInterval(timer);
+  }, []);
   const navigate = useNavigate();
 
   const handleGoogleSignIn = async () => {
@@ -30,11 +46,7 @@ export default function Home() {
     if (user) {
       navigate("/founder-form");
     } else {
-      toast({
-        title: "Authentication Required",
-        description: "Please sign in to apply.",
-        variant: "destructive",
-      });
+      navigate("/register");
     }
   };
 
@@ -44,36 +56,36 @@ export default function Home() {
 
   const teamMembers = [
     {
-      name: "Arjun Mehta",
+      name: "Ramanand Thakur",
       role: "Founder & CEO",
-      image: "",
-      description: "Serial entrepreneur with 15+ years in startup ecosystem. Previously founded and exited two tech companies.",
-      expertise: ["Strategy", "Leadership", "Fundraising"],
-      linkedin: "#"
+      image: Ceo,
+      description: "Ramanand is the visionary behind the Founderoo. With a sharp eye for innovation and deep understanding of startup's future he is dedicatedly contributing towards Bihar’s changing startup ecosystem. Bold, strategic and always future focused, he is igniting a movement of Brand - first entrepreneurship.",
+      expertise: ["CompanyVision", "Leadership", "Fundraising","Branding", "Market Research"],
+      linkedin: "https://www.linkedin.com/in/ramanand-thakur"
     },
     {
-      name: "Priya Singh",
-      role: "Head of Investments",
-      image: "",
-      description: "Former VC with Goldman Sachs. Led investments in 50+ startups with combined valuation of $2B+.",
-      expertise: ["Due Diligence", "Portfolio Management", "Market Analysis"],
-      linkedin: "#"
+      name: "Tannu Priya",
+      role: "CPO",
+      image: cpo,
+      description: "The Chief People Officer at Founderoo, she brings heart and strategy together.With a background in development and management, she understands both people and systems.Her expertise in marketing, human resource management, and founder evaluation drives real impact.At Brandify & Company, she ensures that every decision begins  and ends  with people.",
+      expertise: ["strategy", "marketing", "human resource management"],
+      linkedin: "https://www.linkedin.com/in/tannu-priya-aaa83b2a9?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkI4XfwtFTPG%2F0Uj03Tq9eQ%3D%3D "
     },
     {
-      name: "Kiran Kumar",
-      role: "Mentor Network Lead",
-      image: "",
-      description: "Ex-Google and Microsoft executive. Built and scaled multiple products from 0 to millions of users.",
-      expertise: ["Product Development", "Scaling", "Tech Strategy"],
-      linkedin: "#"
+      name: "Kajal Kumari",
+      role: "HR",
+      image: hr,
+      description: "Kajal has spent nearly 8 years in managing human resources. With her experience she is redefining the way companies approach talent to work for mutual growth by providing a healthy environment where everyone is able to grow in a more Organised way benefitting companies on one hand and nurturing talent on the other.",
+      expertise: ["TalentAcquisition", "EmployeeRelations", "HRCompliance"],
+      linkedin: "https://www.linkedin.com/in/kajal-kumari-a1048b1b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
     },
     {
-      name: "Sneha Patel",
-      role: "Operations Director",
-      image: "",
-      description: "Operations expert who streamlined processes for 100+ startups. MBA from IIM Ahmedabad.",
-      expertise: ["Operations", "Process Design", "Growth Hacking"],
-      linkedin: "#"
+      name: "Mukesh JHA",
+      role: "Operation  Director ",
+      image: cto,
+      description: "He is a seasoned Blockchain enthusiast with nearly a decade of hands-on experience in the crypto space. An alumnus of Motilal Nehru National Institute of Technology, Mukesh blends deep technical knowledge in offering Blockchain services. Worked on 10+ startup ideas he knows well how Technology can help early stage startups to grow in a sustainable manner.",
+      expertise: ["TechArchitecture", "SystemScalability", "EngineeringLeadership", "Blockchain"],
+      linkedin: "https://www.linkedin.com/in/mukeshly/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     }
   ];
 
@@ -92,47 +104,35 @@ export default function Home() {
     },
     {
       question: "What equity stake does Founderoo take?",
-      answer: "Founderoo typically takes between 5% to 10% equity depending on funding amount and support provided. This is competitive with industry standards."
+      answer: "Founderoo typically takes between 7 % to 11 % equity depending on funding amount and support provided. This is competitive with industry standards."
     }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-primary/5 dark:bg-primary/10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width=\'60\'%20height=\'60\'%20viewBox=\'0%200%2060%2060\'%20xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg%20fill=\'none\'%20fill-rule=\'evenodd\'%3E%3Cg%20fill=\'%239C92AC\'%20fill-opacity=\'0.05\'%3E%3Ccircle%20cx=\'30\'%20cy=\'30\'%20r=\'4\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-          <div className="text-center">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="text-primary">
-                Got an Idea?
-              </span>
-              <br />
-              <span className="text-foreground">Get Funded.</span>
+      <section className="relative overflow-hidden min-h-[600px] bg-primary/5 dark:bg-primary/10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="text-center flex flex-col items-center justify-center min-h-[400px]">
+            <h1 className="text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem] font-bold mb-6">
+              <div className="text-primary">Got An Idea ?</div>
+              <div className="mt-4">
+                <TypewriterEffectSmooth
+                  words={[
+                    { text: currentText === 0 ? "Get Funded." : "Direction for every dream.", className: "text-foreground" }
+                  ]}
+                  cursorClassName="bg-primary"
+                  key={currentText} // Force re-render to restart animation
+                />
+              </div>
             </h1>
-            <p className="text-xl sm:text-2xl text-muted-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
+            <p className="text-xl sm:text-2xl text-muted-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
               Start your founder journey with Founderoo. We support idea-stage founders with capital, coaching, and connections.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-yellow-400 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200" onClick={handleApplyNow}>
                 Pay ₹499 & Apply Now
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-4 text-lg border-2 hover:bg-muted"
-                onClick={handleGoogleSignIn}
-                disabled={loading}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48" className="mr-2">
-                  <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
-                  <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
-                  <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
-                  <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
-                </svg>
-                {loading ? 'Signing in...' : 'Sign in with Google'}
               </Button>
             </div>
           </div>
@@ -208,22 +208,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Priya Sharma",
-                role: "Founder, EcoBasket",
-                story: "Founderoo believed in my sustainable grocery delivery idea when no one else did. With their ₹15 lakh funding and mentorship, we've grown to serve 5 cities in just 18 months.",
-                avatar: ""
+                name: "Narendra Narayan",
+                role: "Founder, NxG",
+                story: "Founderoo believed in my music composing  idea when no one else did. With their ₹15 lakh funding and mentorship, we've grown to serve 2 cities in just 3 months.",
+                avatar: NarendraNarayan
               },
               {
-                name: "Rahul Kapoor",
-                role: "CEO, TechBuddy",
-                story: "I was just a college student with an AI tutoring idea. Founderoo not only funded us with ₹10 lakhs but connected me with tech industry veterans who helped refine our product. We now have 50,000+ users!",
-                avatar: ""
+                name: "Krish",
+                role: "CEO, Board ki padhai", 
+                story: "I was just a college student with an Board tutoring idea. Founderoo not only funded us with ₹10 lakhs but connected me with ED-tech industry veterans who helped refine our product. We now have 50,000+ users!",
+                avatar: krish
               },
               {
-                name: "Aisha Patel",
-                role: "Founder, HealthFirst",
-                story: "The ₹499 application fee was the best investment I ever made. Founderoo funded my healthcare app with ₹20 lakhs and their mentors helped us navigate regulatory challenges. We're now expanding nationwide.",
-                avatar: ""
+                name: "Ravi Prakash",
+                role: "Founder, Homo",
+                story: "The ₹499 application fee was the best investment I ever made. Founderoo funded my Hospitality idea with ₹10 lakhs and their mentors helped us navigate regulatory challenges. We're now expanding nationwide.",
+                avatar: ravi
               }
             ].map((testimonial, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-border/50 shadow-lg bg-card/95 backdrop-blur-sm">
@@ -270,8 +270,8 @@ export default function Home() {
                   </CardHeader>
                 </div>
                 <CardContent className="space-y-4">
-                  <p className="text-muted-foreground dark:text-muted-foreground/90 text-sm leading-relaxed">{member.description}</p>
-                  <div className="flex flex-wrap gap-1">
+                  <p className="text-muted-foreground dark:text-muted-foreground/90 text-sm leading-relaxed text-left">{member.description}</p>
+                  <div className="flex flex-wrap gap-1 justify-start">
                     {member.expertise.map((skill, skillIndex) => (
                       <Badge key={skillIndex} variant="secondary" className="text-xs bg-primary/10 text-primary">
                         {skill}
@@ -279,9 +279,11 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="flex justify-center pt-2">
-                    <Button variant="ghost" size="sm" className="group-hover:bg-primary/10 transition-colors duration-300">
-                      <Linkedin className="h-4 w-4 text-primary" />
-                    </Button>
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                      <Button variant="ghost" size="sm" className="group-hover:bg-primary/10 transition-colors duration-300">
+                        <Linkedin className="h-4 w-4 text-primary" />
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>

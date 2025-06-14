@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { auth } from '../firebase';
@@ -67,8 +68,29 @@ export default function Dashboard() {
             </Button>
           </CardFooter>
         </Card>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+       ) : (
+         <div className="space-y-6">
+          <Card className="mb-6">
+            <CardHeader>
+              <CardTitle>Startup Journey Progress</CardTitle>
+              <CardDescription>Track your startup application status</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span>Application Status</span>
+                  <span className="text-primary font-medium">In Review</span>
+                </div>
+                <Progress value={33} className="h-2" />
+                <div className="grid grid-cols-3 text-xs text-muted-foreground mt-1">
+                  <div>Form Submitted</div>
+                  <div className="text-center">Under Review</div>
+                  <div className="text-right">Approved</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card>
             <CardHeader>
               <CardTitle>Your Startup Vision</CardTitle>
@@ -94,46 +116,7 @@ export default function Dashboard() {
               </Button>
             </CardFooter>
           </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Users</CardTitle>
-              <CardDescription>Total user count</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-4xl font-bold">1,234</p>
-            </CardContent>
-            <CardFooter>
-              <Button variant="ghost" size="sm">View all users</Button>
-            </CardFooter>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Revenue</CardTitle>
-              <CardDescription>Monthly revenue</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-4xl font-bold">$12,345</p>
-            </CardContent>
-            <CardFooter>
-              <Button variant="ghost" size="sm">View details</Button>
-            </CardFooter>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Activity</CardTitle>
-              <CardDescription>Weekly active users</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-4xl font-bold">78%</p>
-            </CardContent>
-            <CardFooter>
-              <Button variant="ghost" size="sm">View analytics</Button>
-            </CardFooter>
-          </Card>
-        </div>
+         </div>
       )}
     </div>
   );

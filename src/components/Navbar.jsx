@@ -3,17 +3,18 @@ import { useAuthStore } from '@/store/auth';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
 import { ProfileMenu } from './ProfileMenu';
-import logo from '@/assets/founderoo.jpg';
+import logo from '@/assets/founderoo.webp';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user } = useAuthStore();
 
   return (
-    <header className="border-b bg-primary text-white">
+    <header className="border-b bg-primary text-primary-foreground fixed top-0 w-full z-50">
       <div className="container mx-auto py-4 px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Founderoo Logo" className="h-11 w-65 object-contain" />
+          <span className="text-2xl font-bold text-white">Founderoo</span>
         </Link>
         <div className="flex items-center gap-4">
           <nav className="flex items-center gap-6">
@@ -45,7 +46,7 @@ export function Navbar() {
               
             </div>
             <button
-              className="md:hidden p-2 hover:bg-secondary hover:text-dark rounded-lg transition-colors"
+              className="md:hidden p-2 hover:bg-secondary hover:text-primary rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <svg

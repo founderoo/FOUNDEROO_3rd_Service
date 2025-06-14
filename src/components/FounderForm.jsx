@@ -15,7 +15,8 @@ export function FounderForm() {
     validation: '',
     fundingUse: '',
     noFundingPlan: '',
-    futureVision: ''
+    futureVision: '',
+    phoneNumber: '',
   });
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -49,6 +50,11 @@ export function FounderForm() {
     {
       id: 'futureVision',
       question: 'Where do you see your startup 3 years from now, and what impact do you hope to create?'
+    }
+    ,
+    {
+      id: 'phoneNumber',
+      question: 'What is your phone number?'
     }
   ];
 
