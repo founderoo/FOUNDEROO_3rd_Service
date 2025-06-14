@@ -29,7 +29,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --overlay-bg: 0 0% 0% / 0.8; /* Black with 80% opacity */
+    --overlay-bg: 0 0% 0%; /* Added pure black overlay */
   }
 
   .dark {
@@ -57,7 +57,7 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --overlay-bg: 0 0% 0% / 0.85; /* Slightly darker for dark mode */
+    --overlay-bg: 0 0% 0%; /* Ensure dark mode overlay is also full black */
   }
 }
 
@@ -70,6 +70,7 @@
   }
 }
 
+/* Fade animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
