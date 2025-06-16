@@ -13,6 +13,7 @@ import {FounderForm} from './components/FounderForm';
 import { useEffect } from 'react';
 
 
+
 function App() {
   const { theme } = useTheme();
   const initializeAuthListener = useAuthStore(state => state.initializeAuthListener);
@@ -30,6 +31,8 @@ function App() {
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
+              
+
               <Route
                 path="/dashboard"
                 element={

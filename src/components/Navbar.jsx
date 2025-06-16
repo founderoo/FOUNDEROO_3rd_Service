@@ -20,13 +20,16 @@ export function Navbar() {
           <nav className="flex items-center gap-6">
             <div className="md:flex items-center gap-6 hidden">
               <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Startup Planner
+                Home
               </Link>
               <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Founder Docs
+                Services
               </Link>
              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Tasks
+                Marketplace
+              </Link>
+              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
+                Partner 
               </Link>
               <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
                 Ask Founderoo
@@ -73,19 +76,25 @@ export function Navbar() {
             to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            Startup Planner
+            Home
           </Link>
           <Link
             to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            Founder Docs
+            Services
           </Link>
            <Link
             to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            Tasks
+           Marketplace
+          </Link>
+          <Link
+            to="/"
+            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
+          >
+            Partner
           </Link>
            <Link
             to="/"

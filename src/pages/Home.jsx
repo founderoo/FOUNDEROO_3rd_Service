@@ -4,7 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
 import { useAuthStore } from "@/store/auth";
-import { ChevronDown, Star, Users, Target, Rocket, CheckCircle, ArrowRight, Linkedin, User } from "lucide-react";
+import { ChevronDown, Star, Users, Target, Rocket, CheckCircle, ArrowRight, Linkedin, User, MessageCircle } from "lucide-react";
+import ChatbotDialog from "@/components/ChatbotDialog";
 import { useNavigate } from "react-router-dom";
 import Ceo from "@/assets/Ceo.png";
 import cpo from "@/assets/cpo.png";
@@ -18,6 +19,7 @@ export default function Home() {
   const { user } = useAuthStore();
   const [openFaq, setOpenFaq] = useState(null);
   const [currentText, setCurrentText] = useState(0);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -97,7 +99,17 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Chat Icon */}
+      <button
+        onClick={() => setIsChatOpen(true)}
+        className="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
+        aria-label="Open Chat"
+      >
+        <MessageCircle size={24} />
+      </button>
+
+      <ChatbotDialog isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[600px] bg-primary/5 dark:bg-primary/10">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
