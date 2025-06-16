@@ -210,6 +210,11 @@ export default function Home() {
                 <p className="text-muted-foreground">Get answers and advice from our AI assistant</p>
               </div>
             </div>
+           <div className="md:col-span-2 flex justify-center items-center py-12">
+               <p className="text-muted-foreground text-2xl font-semibold max-w-3xl text-center mx-auto">
+                 90% of startups fail - not because of bad ideas, but because of bad execution. Founderoo helps first-time founders avoid that trap.
+               </p>
+           </div>
           </div>
         </div>
       </section>

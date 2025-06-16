@@ -53,7 +53,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">About Us</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Our Team</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Careers</a></li>
+              <li><a href="https://tally.so/r/wMQk60" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-sm">Careers</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Blog</a></li>
               <li><a href="https://www.linkedin.com/newsletters/the-founder-s-signal-7338714487572570114" className="text-gray-300 hover:text-white transition-colors text-sm">Newsletter</a></li>
             </ul>

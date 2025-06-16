@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
 import { ProfileMenu } from './ProfileMenu';
 import logo from '@/assets/founderoo.webp';
+import { ArrowRight } from 'lucide-react';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,7 +33,7 @@ export function Navbar() {
                 Partner 
               </Link>
               <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Ask Founderoo
+                Ask Founderoo <ArrowRight className="inline-block ml-1 h-4 w-4" />
               </Link>
               {!user && (
                 <Link
