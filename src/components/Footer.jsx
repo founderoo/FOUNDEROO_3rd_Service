@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Linkedin, MessageCircleCodeIcon } from 'lucide-react';
-import ComingSoonModal from './ComingSoon'; // Updated modal with Lottie
+import ComingSoonModal from './ComingSoon'; 
 
 export function Footer() {
   const [showModal, setShowModal] = useState(false);
@@ -14,9 +14,10 @@ export function Footer() {
     <footer className="bg-gray-900 text-white">
       {showModal && <ComingSoonModal onClose={() => setShowModal(false)} />}
 
+      {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
+          
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">Founderoo</h3>
@@ -52,7 +53,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">About Us</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Our Team</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Careers</a></li>
+              <li><a href="https://tally.so/r/wMQk60" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-sm">Careers</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Blog</a></li>
               <li><a href="https://www.linkedin.com/newsletters/the-founder-s-signal-7338714487572570114" className="text-gray-300 hover:text-white transition-colors text-sm">Newsletter</a></li>
             </ul>
@@ -84,10 +85,10 @@ export function Footer() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
+      {/* Bottom Bar */}
       <div className="border-t border-gray-800 bg-gray-950">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
