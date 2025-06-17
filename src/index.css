@@ -37,7 +37,7 @@
     /* Dark theme colors - Enhanced */
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 5%;
+    --card: 0 0% 5%; /* Slightly lighter than pure black */
     --card-foreground: 0 0% 100%;
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
@@ -61,28 +61,12 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-
-  /* Remove tap highlight and fix white box issue */
-  * {
-    @apply border-border;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  /* Better focus styles */
-  button, a, [role="button"], input, textarea, select {
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
-    
-    &:focus-visible {
-      outline: 2px solid hsl(var(--primary));
-      outline-offset: 2px;
-    }
-  }
 }
 
 @layer base {
+  * {
+    @apply border-border;
+  }
   body {
     @apply bg-background text-foreground pt-[4.5rem] min-h-screen;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -93,7 +77,7 @@
   /* Smooth scrolling for better UX */
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4.5rem;
+    scroll-padding-top: 4.5rem; /* Matches your body padding */
   }
 }
 
@@ -203,6 +187,11 @@
   min-height: 200px;
 }
 
+/* Focus States for Accessibility */
+button:focus, a:focus, input:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-primary/50;
+}
+
 /* Loading States */
 @keyframes pulse {
   0%, 100% {
@@ -227,7 +216,7 @@
 /* Responsive Improvements */
 @media (max-width: 768px) {
   body {
-    @apply pt-[3.5rem];
+    @apply pt-[3.5rem]; /* Smaller top padding on mobile */
   }
   
   html {
@@ -253,49 +242,7 @@
 .transition-fast {
   transition: all 0.15s ease;
 }
-
-/* Modal Styles */
-.modal-overlay {
-  background-color: hsl(var(--overlay-bg)) !important;
-  backdrop-filter: blur(4px);
-}
-
 .modal-content {
-  background-color: hsl(var(--card)) !important;
-  color: hsl(var(--card-foreground)) !important;
-  border: 1px solid hsl(var(--border));
-  border-radius: var(--radius);
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  color: white !important;
 }
-
-.dark .modal-content {
-  background-color: hsl(var(--card)) !important;
-  color: hsl(var(--card-foreground)) !important;
-}
-
-/* Additional utility for modal close button */
-.modal-close-btn {
-  @apply absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors p-1 rounded-full hover:bg-gray-800;
-}
-
-/* New: Fix for white box issue on click */
-button, a, [role="button"] {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-user-select: none;
-  user-select: none;
-  &:active {
-    transform: scale(0.98);
-  }
-}
-
-/* New: Remove outline for mouse users but keep for keyboard */
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* New: Custom focus styles for better accessibility */
-:focus-visible {
-  outline: 2px solid hsl(var(--primary));
-  outline-offset: 2px;
-  border-radius: 0.25rem;
-}
- 
