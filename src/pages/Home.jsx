@@ -127,7 +127,7 @@ export default function Home() {
                 onClick={handleApplyNow}
                 className="bg-primary text-primary-foreground hover:bg-yellow-400 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 rounded-lg flex items-center gap-2"
               >
-                Get Started
+                Get Funded
                 <ArrowRight className="h-5 w-5" />
               </button>
             </div>
