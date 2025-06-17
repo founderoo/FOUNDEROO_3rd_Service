@@ -1,4 +1,212 @@
- @tailwind base;
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 270 84% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 84% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 84% 20%;
+    --primary: 270 68% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 268 59% 70%;
+    --secondary-foreground: 270 84% 20%;
+    --muted: 270 30% 96%;
+    --muted-foreground: 270 20% 50%;
+    --accent: 268 59% 70%;
+    --accent-foreground: 270 84% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 30% 90%;
+    --input: 270 30% 90%;
+    --ring: 270 68% 40%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+  
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+    
+    
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 270 68% 25%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 270 60% 35%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 80%;
+    --accent: 270 68% 25%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 270 68% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    hsl(var(--primary)),
+    hsl(var(--secondary))
+  );
+}
+
+.card-hover {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.card-hover:hover {
+  @apply shadow-lg -translate-y-1;
+}
+
+.btn-hover {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.btn-hover:hover {
+  @apply shadow-md -translate-y-0.5;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: hsl(var(--primary));
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+}
+
+.team-card {
+  @apply hover:shadow-2xl transition-all duration-500 hover:-translate-y-4;
+  @apply border border-border/50 shadow-lg overflow-hidden bg-card/95 backdrop-blur-sm;
+}
+
+.chat-button {
+  @apply fixed bottom-6 right-6 bg-primary text-primary-foreground p-3 rounded-full shadow-lg;
+  @apply hover:bg-primary/90 transition-colors z-50;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    to bottom right,
+    hsl(var(--primary)/0.05),
+    hsl(var(--secondary)/0.05)
+  );
+}
+
+.feature-card {
+  @apply bg-white/50 dark:bg-black/80 rounded-lg backdrop-blur-sm;
+  @apply transition-all duration-300 hover:shadow-md;
+}
+
+.faq-accordion {
+  @apply transition-all duration-300 hover:shadow-lg border border-border/50;
+  @apply shadow-md bg-card/95 backdrop-blur-sm;
+}
+
+.transition-slow {
+  transition: all 0.5s ease;
+}
+
+.transition-medium {
+  transition: all 0.3s ease;
+}
+
+.transition-fast {
+  transition: all 0.15s ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+} */
+ 
+  @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
