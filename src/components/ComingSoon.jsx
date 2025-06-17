@@ -39,4 +39,3 @@ export default function ComingSoonModal({ onClose }) {
     </div>
   );
 }
-
