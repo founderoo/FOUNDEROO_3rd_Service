@@ -206,7 +206,7 @@
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 } */
  
-  @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -245,7 +245,7 @@
     /* Dark theme colors - Enhanced */
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 5%; /* Slightly lighter than pure black */
+    --card: 0 0% 5%;
     --card-foreground: 0 0% 100%;
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
@@ -282,14 +282,12 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Smooth scrolling for better UX */
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4.5rem; /* Matches your body padding */
+    scroll-padding-top: 4.5rem;
   }
 }
 
-/* Enhanced Animations */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -330,7 +328,6 @@
   animation: float 3s ease-in-out infinite;
 }
 
-/* Enhanced Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -350,7 +347,6 @@
   background: hsl(var(--primary) / 0.8);
 }
 
-/* Gradient Utilities */
 .text-gradient {
   background-clip: text;
   -webkit-background-clip: text;
@@ -370,7 +366,6 @@
   );
 }
 
-/* Component Styles */
 .card-hover {
   @apply transition-all duration-300 ease-in-out transform;
 }
@@ -389,18 +384,13 @@
   @apply shadow-md -translate-y-0.5 scale-105;
 }
 
-/* Lottie Animation Container */
 .lottie-container {
   @apply w-full h-full flex items-center justify-center;
   min-height: 200px;
 }
 
-/* Focus States for Accessibility */
-/* button:focus, a:focus, input:focus {
-  @apply outline-none ring-2 ring-offset-2 ring-primary/50;
-} */
+/* Removed focus ring styles */
 
-/* Loading States */
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
@@ -414,31 +404,26 @@
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Chart Colors Utilities */
 .chart-1 { background-color: hsl(var(--chart-1)); }
 .chart-2 { background-color: hsl(var(--chart-2)); }
 .chart-3 { background-color: hsl(var(--chart-3)); }
 .chart-4 { background-color: hsl(var(--chart-4)); }
 .chart-5 { background-color: hsl(var(--chart-5)); }
 
-/* Responsive Improvements */
 @media (max-width: 768px) {
   body {
-    @apply pt-[3.5rem]; /* Smaller top padding on mobile */
+    @apply pt-[3.5rem];
   }
-  
   html {
     scroll-padding-top: 3.5rem;
   }
 }
 
-/* Overlay Utility */
 .overlay {
   background-color: hsl(var(--overlay-bg));
   @apply fixed inset-0 z-40;
 }
 
-/* Custom Transitions */
 .transition-slow {
   transition: all 0.5s ease;
 }
@@ -450,6 +435,7 @@
 .transition-fast {
   transition: all 0.15s ease;
 }
+
 .modal-content {
   background-color: rgba(0, 0, 0, 0.9) !important;
   color: white !important;
