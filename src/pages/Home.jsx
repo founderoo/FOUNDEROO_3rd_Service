@@ -81,20 +81,36 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "How much funding can I expect?",
-      answer: "Funding depends on the stage of your startup and pitch quality. Typical amounts range from ₹10 lakhs to ₹1 crore for selected startups."
+      question: "What is Founderoo?",
+      answer: "FOUNDEROO is an operating system for first-time founders. We provide everything—from startup idea validation, tools, templates, and mentorship—to help you go from concept to launch confidently."
     },
     {
-      question: "Do I need a complete business plan?",
-      answer: "No, a clear idea and a problem-solution overview are sufficient to start your application. We help you develop the complete plan during our mentorship process."
+      question: " Who is Founderoo for?",
+      answer: "Founderoo is built especially for first-time founders who:Have an idea but don’t know where to startNeed a roadmap to build a digital business or startup Want access to tools, templates, and real guidance"
     },
     {
-      question: "How long does the application process take?",
-      answer: "The process usually takes 1-2 weeks from application to decision. We provide regular updates throughout the review process."
+      question: "Who does Founderoo work for?",
+      answer: "FOUNDEROO is built specifically for first-time founders, solo entrepreneurs, studentpreneurs, and anyone with an idea who wants structured help to build their startup."
     },
     {
-      question: "What equity stake does Founderoo take?",
-      answer: "Founderoo typically takes between 7 % to 11 % equity depending on funding amount and support provided. This is competitive with industry standards."
+      question: "Is Founderoo free for first-time founders?",
+      answer: "Yes, Founderoo offers a free plan for first-time founders to access essential tools. Paid upgrades are available for advanced features, premium resources, or mentorship access."
+    },
+    {
+      question: "How does Founderoo help me build a brand?",
+      answer: "  FOUNDEROO gives you a complete brand-building toolkit, including: software you need to We help you go from “idea” to “brand that speaks.”"
+    },
+    {
+      question: " How does payment work on Founderoo?",
+      answer: "You can:Start for free Upgrade to a paid plan when you’re ready Purchase one- time services like logo design or mentorship Payments are safe, and invoices are always provided for transparency."
+    },
+    {
+      question: "What is a “Head” on Founderoo?",
+      answer: "A Head is an expert or mentor in our network—think branding pros, startup advisors, designers, etc.They offer services like: Mentorship calls Branding & tech setup Funding prep or pitch deck reviews You can view their profile, read reviews, and book sessions directly."
+    },
+    {
+      question: "How does a “Head” set their rate?",
+      answer: "Each Head sets their own: Service type (hourly, per session, or per project) Pricing based on value and expertise Availability and terms You only pay for what you need, with transparent pricing shown upfront"
     }
   ];
 
@@ -210,11 +226,11 @@ export default function Home() {
                 <p className="text-muted-foreground">Get answers and advice from our AI assistant</p>
               </div>
             </div>
-           <div className="md:col-span-2 flex justify-center items-center py-12">
-               <p className="text-muted-foreground text-2xl font-semibold max-w-3xl text-center mx-auto">
-                 90% of startups fail - not because of bad ideas, but because of bad execution. Founderoo helps first-time founders avoid that trap.
-               </p>
-           </div>
+            <div className="md:col-span-2 flex justify-center items-center py-12">
+              <p className="text-muted-foreground text-2xl font-semibold max-w-3xl text-center mx-auto">
+                90% of startups fail - not because of bad ideas, but because of bad execution. Founderoo helps first-time founders avoid that trap.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -223,7 +239,7 @@ export default function Home() {
       <section id="about" className="py-24 bg-background dark:bg-background/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">How Founderoo Works</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">How Does Founderoo Provides  Funding</h2>
             <p className="text-xl text-muted-foreground">Three simple steps to turn your idea into a funded startup</p>
           </div>
 
@@ -417,45 +433,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-
-      {/* Terms */}
-      <section className="py-16 bg-muted/50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="border border-border/50 shadow-lg bg-card/95 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold text-center">Terms & Conditions</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold mb-2 flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  Application Fee
-                </h3>
-                <p className="text-muted-foreground">The ₹499 application fee is non-refundable and covers the cost of reviewing your application. This fee ensures that we receive serious applications and can dedicate proper time to evaluate each one.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-2 flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  Interview Fee
-                </h3>
-                <p className="text-muted-foreground">If shortlisted, the ₹1,999 interview fee is required to proceed to the final stage. 50% (₹999.50) will be refunded if your startup is not selected after the interview process.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-2 flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  Selection Process
-                </h3>
-                <p className="text-muted-foreground">Selection is based on the viability of your idea, market potential, and founder capabilities. All decisions made by the Founderoo investment committee are final.</p>
-              </div>
-              <div className="pt-4 border-t">
-                <p className="text-sm text-muted-foreground">
-                  By submitting your application and paying the fee, you agree to these terms and conditions. Founderoo reserves the right to modify these terms at any time.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+      
     </div>
   );
 }

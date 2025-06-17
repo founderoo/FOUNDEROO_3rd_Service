@@ -21,20 +21,18 @@ export function Navbar() {
           <nav className="flex items-center gap-6">
             <div className="md:flex items-center gap-6 hidden">
               <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Home
+                Founder
               </Link>
               <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Services
+                What We Offer
               </Link>
              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Marketplace
+                Pricing
               </Link>
               <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Partner 
+                Community
               </Link>
-              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
-                Ask Founderoo <ArrowRight className="inline-block ml-1 h-4 w-4" />
-              </Link>
+              
               {!user && (
                 <Link
                   to="/register"
@@ -77,25 +75,25 @@ export function Navbar() {
             to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            Home
+            Founder
           </Link>
           <Link
             to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            Services
+            What We Offer
           </Link>
            <Link
             to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-           Marketplace
+            Pricing
           </Link>
           <Link
             to="/"
             className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            Partner
+            Community
           </Link>
            <Link
             to="/"
