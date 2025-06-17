@@ -389,6 +389,7 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Linkedin, MessageCircleCodeIcon, Rocket } from 'lucide-react';
 import ComingSoonModal from './ComingSoon';
+import { Link } from 'react-router-dom';  
 
 export function Footer() {
   const [showModal, setShowModal] = useState(false);
@@ -473,13 +474,19 @@ export function Footer() {
               >
                 About Us
               </a>
-              <a 
-                href="/our-team" 
-                
+              {/* <a 
+                href="#" 
+                onClick={handleComingSoonClick}
                 className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
               >
                 Our Team
-              </a>
+              </a> */}
+           <Link 
+  to="/our-team" 
+  className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
+>
+  Our Team
+</Link>
               <a 
                 href="https://tally.so/r/wMQk60" 
                 target="_blank"
