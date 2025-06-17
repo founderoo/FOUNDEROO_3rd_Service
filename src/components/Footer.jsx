@@ -474,8 +474,8 @@ export function Footer() {
                 About Us
               </a>
               <a 
-                href="#" 
-                onClick={handleComingSoonClick}
+                href="/our-team" 
+                
                 className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
               >
                 Our Team
