@@ -53,40 +53,7 @@ export default function Home() {
     linkedin: "https://www.linkedin.com/in/ramanand-thakur"
   };
 
-  const teamMembers = [
-    {
-      name: "Ramanand Thakur",
-      role: "Founder & CEO",
-      image: Ceo,
-      description: "Ramanand is the visionary behind the Founderoo. With a sharp eye for innovation and deep understanding of startup's future he is dedicatedly contributing towards Bihar’s changing startup ecosystem. Bold, strategic and always future focused, he is igniting a movement of Brand - first entrepreneurship.",
-      expertise: ["CompanyVision", "Leadership", "Fundraising", "Branding", "Market Research"],
-      linkedin: "https://www.linkedin.com/in/ramanand-thakur"
-    },
-    {
-      name: "Tannu Priya",
-      role: "CPO",
-      image: cpo,
-      description: "The Chief People Officer at Founderoo, she brings heart and strategy together.With a background in development and management, she understands both people and systems.Her expertise in marketing, human resource management, and founder evaluation drives real impact.At Founderoo, she ensures that every decision begins  and ends  with people.",
-      expertise: ["strategy", "marketing", "human resource management"],
-      linkedin: "https://www.linkedin.com/in/tannu-priya-aaa83b2a9/ "
-    },
-    {
-      name: "Kajal Kumari",
-      role: "HR",
-      image: hr,
-      description: "Kajal has spent nearly 8 years in managing human resources. With her experience she is redefining the way companies approach talent to work for mutual growth by providing a healthy environment where everyone is able to grow in a more Organised way benefitting companies on one hand and nurturing talent on the other.",
-      expertise: ["TalentAcquisition", "EmployeeRelations", "HRCompliance"],
-      linkedin: "https://www.linkedin.com/in/kajal-kumari-a1048b1b1/ "
-    },
-    {
-      name: "Mukesh JHA",
-      role: "Operation  Director ",
-      image: cto,
-      description: "He is a seasoned Blockchain enthusiast with nearly a decade of hands-on experience in the crypto space. An alumnus of Motilal Nehru National Institute of Technology, Mukesh blends deep technical knowledge in offering Blockchain services. Worked on 10+ startup ideas he knows well how Technology can help early stage startups to grow in a sustainable manner.",
-      expertise: ["TechArchitecture", "SystemScalability", "EngineeringLeadership", "Blockchain"],
-      linkedin: "https://www.linkedin.com/in/mukeshly/"
-    }
-  ];
+  
 
   const faqs = [
     {
@@ -179,7 +146,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Startup Planner</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Pitch OS</h3>
                 <p className="text-muted-foreground">Map out your business model and startup roadmap</p>
               </div>
             </div>
@@ -353,7 +320,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet the Team */}
+      {/* founder section  */}
        <section id="founder" className="py-24 bg-background dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
