@@ -11,7 +11,7 @@ import { useAuthStore } from './store/auth';
 import { Toaster } from './components/ui/toaster';
 import {FounderForm} from './components/FounderForm';
 import { useEffect } from 'react';
-import  OurTeam  from './pages/OurTeam';
+import  OurTeam  from './pages/Ourteam';
 
 
 function App() {
