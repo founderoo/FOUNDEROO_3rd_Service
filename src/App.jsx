@@ -11,7 +11,7 @@ import { useAuthStore } from './store/auth';
 import { Toaster } from './components/ui/toaster';
 import {FounderForm} from './components/FounderForm';
 import { useEffect } from 'react';
-
+import  OurTeam  from './pages/OurTeam';
 
 
 function App() {
@@ -44,6 +44,7 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/founder-form" element={<FounderForm />} />
+              <Route path="/our-team" element={<OurTeam />} />
             </Routes>
           </main>
           <Footer />
