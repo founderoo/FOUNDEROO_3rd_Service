@@ -23,7 +23,7 @@ export function ThemeToggle() {
       size="icon"
       onClick={handleClick}
       className={`text-white touch-none select-none bg-transparent md:hover:bg-secondary/20 md:hover:text-secondary active:bg-secondary/10 transition-all duration-200 ${
-        isClicked ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+        isClicked ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
       }`}
       style={{ 
         WebkitTapHighlightColor: 'transparent', 
