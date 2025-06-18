@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Linkedin, MessageCircleCodeIcon, Rocket } from 'lucide-react';
 import ComingSoonModal from './ComingSoon';
-import { Link } from 'react-router-dom';  
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   const [showModal, setShowModal] = useState(false);
@@ -22,7 +22,7 @@ export function Footer() {
 
       <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
+
           {/* Company Info - Enhanced */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -32,11 +32,11 @@ export function Footer() {
               The Operating System for Founders.
             </p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Building innovative solutions that help businesses grow and thrive in the digital age. 
+              Building innovative solutions that help businesses grow and thrive in the digital age.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://www.linkedin.com/company/founderoo-circle/" 
+              <a
+                href="https://www.linkedin.com/company/founderoo-circle/"
                 className="text-gray-400 hover:text-purple-400 transition-colors"
                 aria-label="LinkedIn"
                 target="_blank"
@@ -44,8 +44,8 @@ export function Footer() {
               >
                 <Linkedin size={20} />
               </a>
-              <a 
-                href="https://github.com/founderoo" 
+              <a
+                href="https://github.com/founderoo"
                 className="text-gray-400 hover:text-purple-400 transition-colors"
                 aria-label="GitHub"
                 target="_blank"
@@ -79,43 +79,36 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Company</h4>
             <div className="space-y-2">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 onClick={handleComingSoonClick}
                 className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
               >
                 About Us
               </a>
-              {/* <a 
-                href="#" 
-                onClick={handleComingSoonClick}
+              <Link
+                to="/our-team"
                 className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
               >
                 Our Team
-              </a> */}
-           <Link 
-  to="/our-team" 
-  className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
->
-  Our Team
-</Link>
-              <a 
-                href="https://tally.so/r/wMQk60" 
+              </Link>
+              <a
+                href="https://tally.so/r/wMQk60"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
               >
                 Careers
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 onClick={handleComingSoonClick}
                 className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
               >
                 Blog
               </a>
-              <a 
-                href="https://www.linkedin.com/newsletters/the-founder-s-signal-7338714487572570114" 
+              <a
+                href="https://www.linkedin.com/newsletters/the-founder-s-signal-7338714487572570114"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
@@ -139,8 +132,8 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MessageCircleCodeIcon size={16} className="text-purple-400 flex-shrink-0" />
-                <a 
-                  href="tel:+917970931573" 
+                <a
+                  href="tel:+917970931573"
                   className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
                 >
                   +91 7970931573
@@ -148,8 +141,8 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-purple-400 flex-shrink-0" />
-                <a 
-                  href="mailto:member@founderoo.in" 
+                <a
+                  href="mailto:member@founderoo.in"
                   className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
                 >
                   member@founderoo.in
@@ -168,26 +161,26 @@ export function Footer() {
               © {new Date().getFullYear()} Founderoo. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
               >
                 Privacy Policy
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
               >
                 Terms of Service
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
               >
                 Cookie Policy
               </a>
-              <a 
-                href="https://github.com/founderoo" 
+              <a
+                href="https://github.com/founderoo"
                 className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
