@@ -37,7 +37,7 @@ export function Footer() {
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/company/founderoo-circle/"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-gray-400 hover:text-secondary transition-colors"
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -46,7 +46,7 @@ export function Footer() {
               </a>
               <a
                 href="https://github.com/founderoo"
-                className="text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-gray-400 hover:text-secondary transition-colors"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -67,7 +67,7 @@ export function Footer() {
                   key={item}
                   href="#"
                   onClick={handleComingSoonClick}
-                  className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
+                  className="text-gray-300 hover:text-secondary transition-colors text-sm block"
                 >
                   {item}
                 </a>
@@ -82,13 +82,13 @@ export function Footer() {
               <a
                 href="#"
                 onClick={handleComingSoonClick}
-                className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
+                className="text-gray-300 hover:text-secondary transition-colors text-sm block"
               >
                 About Us
               </a>
               <Link
                 to="/our-team"
-                className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
+                className="text-gray-300 hover:text-secondary transition-colors text-sm block"
               >
                 Our Team
               </Link>
@@ -96,14 +96,14 @@ export function Footer() {
                 href="https://tally.so/r/wMQk60"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
+                className="text-gray-300 hover:text-secondary transition-colors text-sm block"
               >
                 Careers
               </a>
               <a
                 href="#"
                 onClick={handleComingSoonClick}
-                className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
+                className="text-gray-300 hover:text-secondary transition-colors text-sm block"
               >
                 Blog
               </a>
@@ -111,7 +111,7 @@ export function Footer() {
                 href="https://www.linkedin.com/newsletters/the-founder-s-signal-7338714487572570114"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-purple-400 transition-colors text-sm block"
+                className="text-gray-300 hover:text-secondary transition-colors text-sm block"
               >
                 Newsletter
               </a>
@@ -134,7 +134,7 @@ export function Footer() {
                 <MessageCircleCodeIcon size={16} className="text-purple-400 flex-shrink-0" />
                 <a
                   href="tel:+917970931573"
-                  className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
+                  className="text-gray-300 hover:text-secondary transition-colors text-sm"
                 >
                   +91 7970931573
                 </a>
@@ -143,7 +143,7 @@ export function Footer() {
                 <Mail size={16} className="text-purple-400 flex-shrink-0" />
                 <a
                   href="mailto:member@founderoo.in"
-                  className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
+                  className="text-gray-300 hover:text-secondary transition-colors text-sm"
                 >
                   member@founderoo.in
                 </a>
@@ -163,25 +163,25 @@ export function Footer() {
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
               <a
                 href="#"
-                className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-sm text-gray-400 hover:text-secondary transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-sm text-gray-400 hover:text-secondary transition-colors"
               >
                 Terms of Service
               </a>
               <a
                 href="#"
-                className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-sm text-gray-400 hover:text-secondary transition-colors"
               >
                 Cookie Policy
               </a>
               <a
                 href="https://github.com/founderoo"
-                className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+                className="text-sm text-gray-400 hover:text-secondary transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -20,23 +20,23 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <nav className="flex items-center gap-6">
             <div className="md:flex items-center gap-6 hidden">
-              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
+              <Link to="/" className="text-sm font-medium md:hover:text-secondary transition-colors font-satoshi">
                 Founder
               </Link>
-              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
+              <Link to="/" className="text-sm font-medium md:hover:text-secondary transition-colors font-satoshi">
                 What We Offer
               </Link>
-             <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
+             <Link to="/" className="text-sm font-medium md:hover:text-secondary transition-colors font-satoshi">
                 Pricing
               </Link>
-              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
+              <Link to="/" className="text-sm font-medium md:hover:text-secondary transition-colors font-satoshi">
                 Community
               </Link>
               
               {!user && (
                 <Link
                   to="/register"
-                  className="md:block hidden text-sm font-medium hover:text-secondary transition-colors font-satoshi"
+                  className="md:block hidden text-sm font-medium md:hover:text-secondary transition-colors font-satoshi"
                 >
                   Register
                 </Link>
@@ -48,7 +48,7 @@ export function Navbar() {
               
             </div>
             <button
-              className="md:hidden p-2 hover:bg-secondary hover:text-primary rounded-lg transition-colors"
+              className="md:hidden p-2 md:hover:bg-secondary md:hover:text-primary rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <svg
@@ -71,44 +71,62 @@ export function Navbar() {
       {/* Mobile menu */}
       <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'} bg-primary pb-4`}>
         <div className="space-y-1 px-4">
-          <Link
-            to="/"
-            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
+          <button
+            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{ WebkitTapHighlightColor: 'transparent' }}
           >
-            Founder
-          </Link>
-          <Link
-            to="/"
-            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
-          >
-            What We Offer
-          </Link>
-           <Link
-            to="/"
-            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
-          >
-            Pricing
-          </Link>
-          <Link
-            to="/"
-            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
-          >
-            Community
-          </Link>
-           <Link
-            to="/"
-            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
-          >
-            Ask Founderoo
-          </Link>
-         
-          {!user && (
-            <Link
-              to="/register"
-              className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
-            >
-              Register
+            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
+              Founder
             </Link>
+          </button>
+          <button
+            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{ WebkitTapHighlightColor: 'transparent' }}
+          >
+            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
+              What We Offer
+            </Link>
+          </button>
+          <button
+            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{ WebkitTapHighlightColor: 'transparent' }}
+          >
+            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
+              Pricing
+            </Link>
+          </button>
+          <button
+            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{ WebkitTapHighlightColor: 'transparent' }}
+          >
+            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
+              Community
+            </Link>
+          </button>
+          <button
+            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{ WebkitTapHighlightColor: 'transparent' }}
+          >
+            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
+              Ask Founderoo
+            </Link>
+          </button>
+          
+          {!user && (
+            <button
+              className="w-full text-left active:bg-secondary/20 rounded transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+            >
+              <Link to="/register" className="block text-sm font-medium font-satoshi py-2">
+                Register
+              </Link>
+            </button>
           )}
         </div>
       </div>

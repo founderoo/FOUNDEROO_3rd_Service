@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -44,13 +45,20 @@ const teamMembers = [
 export default function OurTeam() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background dark:bg-background/50">
       {/* Back Button */}
       <div className="container mx-auto px-4 sm:px-6 pt-8">
-        <Button 
-          variant="ghost" 
-          onClick={() => navigate(-1)}
+        <Button
+          variant="ghost"
+          onClick={() => {
+            window.scrollTo(0, 0);
+            navigate("/");
+          }}
           className="flex items-center gap-2"
         >
           <ArrowLeft size={18} />
