@@ -48,7 +48,7 @@ export default function Home() {
     name: "Ramanand Thakur",
     role: "Founder & CEO",
     image: Ceo,
-    description: "Ramanand is the visionary behind the Founderoo. With a sharp eye for innovation and deep understanding of startup's future he is dedicatedly contributing towards Bihar's changing startup ecosystem. Bold, strategic and always future focused, he is igniting a movement of Brand - first entrepreneurship.",
+    description: "Ramanand is the visionary behind the Founderoo. With a sharp eye for innovation and deep understanding of Startup's future he is dedicatedly contributing towards Bihar's changing startup ecosystem. Bold, strategic and always future focused, he is igniting a movement of Brand - first entrepreneurship.",
     expertise: ["CompanyVision", "Leadership", "Fundraising", "Branding", "Market Research"],
     linkedin: "https://www.linkedin.com/in/ramanand-thakur"
   };
@@ -58,35 +58,35 @@ export default function Home() {
   const faqs = [
     {
       question: "What is Founderoo?",
-      answer: "FOUNDEROO is an operating system for first-time founders. We provide everything—from startup idea validation, tools, templates, and mentorship—to help you go from concept to launch confidently."
+      answer: "FOUNDEROO is an operating system for First-time Founders. We provide everything—from Startup Idea Validation, Tools, Templates, and Mentorship—to help you go from Concept to Clarity and Launching Confidently."
     },
     {
-      question: " Who is Founderoo for?",
-      answer: "Founderoo is built especially for first-time founders who:Have an idea but don’t know where to startNeed a roadmap to build a digital business or startup Want access to tools, templates, and real guidance"
+      question: " Whom is Founderoo for?",
+      answer: "FOUNDEROO is built especially for the First-time Founders who Have an Idea but don’t know From Where to Start , Need a Roadmap to Build a Digital Business or Startup , Want access to Tools, Templates, and Real-Time Guidance to Grow Sustainabily"
     },
     {
-      question: "Who does Founderoo work for?",
-      answer: "FOUNDEROO is built specifically for first-time founders, solo entrepreneurs, studentpreneurs, and anyone with an idea who wants structured help to build their startup."
+      question: "Whom does Founderoo work for?",
+      answer: "FOUNDEROO is built specifically for First-time Founders, Solo Entrepreneurs, Studentpreneurs, and anyone with an Idea who wants a structured help to build the Startup."
     },
     {
-      question: "Is Founderoo free for first-time founders?",
-      answer: "Yes, Founderoo offers a free plan for first-time founders to access essential tools. Paid upgrades are available for advanced features, premium resources, or mentorship access."
+      question: "Does Founderoo provide any special oportunity for first-time founders?",
+      answer: "FOUNDEROO offers a Free plan for First-time Founders to access essential tools for a Startup to Grow. Paid upgrades are available for Advanced Features, Premium Resources, or Mentorship Access."
     },
     {
-      question: "How does Founderoo help me build a brand?",
-      answer: "  FOUNDEROO gives you a complete brand-building toolkit, including: software you need to We help you go from “idea” to “brand that speaks.”"
+      question: "How does Founderoo help me build a Brand?",
+      answer: "FOUNDEROO provides you a Complete Brand-Building Toolkit including Software. We help you go from “Idea” to “Brand that Speaks.”"
     },
     {
       question: " How does payment work on Founderoo?",
-      answer: "You can:Start for free Upgrade to a paid plan when you’re ready Purchase one- time services like logo design or mentorship Payments are safe, and invoices are always provided for transparency."
+      answer: "You can Start by paying nothing and upgrade to a Paid Plan when you’re ready to Purchase one-time service like Logo Design or Mentorship.Payments are safe, and invoices are always provided for transparency."
     },
     {
-      question: "What is a “Head” on Founderoo?",
-      answer: "A Head is an expert or mentor in our network—think branding pros, startup advisors, designers, etc.They offer services like: Mentorship calls Branding & tech setup Funding prep or pitch deck reviews You can view their profile, read reviews, and book sessions directly."
+      question: "Who is a “Head” in Founderoo?",
+      answer: "A Head is an expert or mentor within our network, offering specialized services such as mentorship calls, branding and tech setup, funding preparation, and pitch deck reviews. You can explore their profile, read client reviews, and book sessions directly through the platform."
     },
     {
-      question: "How does a “Head” set their rate?",
-      answer: "Each Head sets their own: Service type (hourly, per session, or per project) Pricing based on value and expertise Availability and terms You only pay for what you need, with transparent pricing shown upfront"
+      question: "How does a Head determine their rate?",
+      answer: "Each Head sets their own pricing based on the type of service offered—whether hourly, per session, or per project. Rates reflect their values, expertise, availability, and terms. You only pay for what you choose, with clear and transparent pricing displayed upfront."
     }
   ];
 
@@ -147,7 +147,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Pitch OS</h3>
-                <p className="text-muted-foreground">Map out your business model and startup roadmap</p>
+                <p className="text-muted-foreground">Map out your Business model and Startup roadmap</p>
               </div>
             </div>
 
@@ -162,7 +162,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Founder Docs</h3>
-                <p className="text-muted-foreground">Generate and manage your key startup documents</p>
+                <p className="text-muted-foreground">Generate and manage your key Startup Documents</p>
               </div>
             </div>
 
@@ -204,7 +204,7 @@ export default function Home() {
             </div>
             <div className="md:col-span-2 flex justify-center items-center py-12">
               <p className="text-muted-foreground text-2xl font-semibold max-w-3xl text-center mx-auto">
-                90% of startups fail - not because of bad ideas, but because of bad execution. Founderoo helps first-time founders avoid that trap.
+                90% of Startups fail - not because of bad ideas, but because of bad Execution. Founderoo helps First-time Founders avoid that trap.
               </p>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">How Does Founderoo Provides  Funding</h2>
-            <p className="text-xl text-muted-foreground">Three simple steps to turn your idea into a funded startup</p>
+            <p className="text-xl text-muted-foreground">Three simple steps to turn your idea into a Funded Startup</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -224,7 +224,7 @@ export default function Home() {
               {
                 step: "1",
                 title: "Apply Now",
-                description: "Submit your startup idea and pay a ₹499 registration fee. Our team will review your application thoroughly.",
+                description: "Submit your Startup Idea, Our Team will review your application thoroughly",
                 fee: "₹499 registration fee",
                 note: "Non-refundable application review",
                 icon: <Target className="h-8 w-8" />
@@ -232,7 +232,7 @@ export default function Home() {
               {
                 step: "2",
                 title: "Shortlisted?",
-                description: "If shortlisted, pay ₹1,999 for the final interview with our investment committee and expert mentors.",
+                description: "If selected in first round, you will be interviewed by our Investment Commeittee and Expert Mentors.",
                 fee: "₹1,999 for final interview",
                 note: "50% refundable if not selected",
                 icon: <Users className="h-8 w-8" />
@@ -240,8 +240,8 @@ export default function Home() {
               {
                 step: "3",
                 title: "Get Funded",
-                description: "Selected founders receive funding, personalized mentorship, and access to our extensive network of industry experts.",
-                fee: "Access to capital",
+                description: "Selected Founders will receive Funding, Personalized Mentorship, and access to our extensive network of industry experts.",
+                fee: "Access to Capital",
                 note: "Plus mentorship and network",
                 icon: <Rocket className="h-8 w-8" />
               }
@@ -287,7 +287,7 @@ export default function Home() {
               },
               {
                 name: "Krish",
-                role: "CEO, Board ki padhai",
+                role: "CEO, Board ki Padhai",
                 story: "I was just a college student with an Board tutoring idea. Founderoo not only funded us with ₹10 lakhs but connected me with ED-tech industry veterans who helped refine our product. We now have 50,000+ users!",
                 avatar: krish
               },
@@ -324,7 +324,7 @@ export default function Home() {
        <section id="founder" className="py-24 bg-background dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground dark:text-white mb-4">Our Founder</h2>
+            <h2 className="text-4xl font-bold text-foreground dark:text-white mb-4"> Founder's Vision</h2>
             <p className="text-xl text-muted-foreground dark:text-gray-300">The visionary behind Founderoo</p>
           </div>
 

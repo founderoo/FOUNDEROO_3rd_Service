@@ -15,23 +15,23 @@ const teamMembers = [
     name: "Tannu Priya",
     role: "CPO",
     image: cpo,
-    description: "The Chief People Officer at Founderoo, she brings heart and strategy together. With a background in development and management, she understands both people and systems. Her expertise in marketing, human resource management, and founder evaluation drives real impact. At Founderoo, she ensures that every decision begins and ends with people.",
-    expertise: ["Strategy", "Marketing","human resource management"],
+    description: "The Chief People Officer at Founderoo, she brings heart and strategy together. With a background in Development and Management, she understands both people and system. Her expertise in Marketing, Human Resource Management, and Founder Evaluation drives real impact. At Founderoo, she ensures that every decision begins and ends with people.",
+    expertise: ["Strategy", "Marketing","Human Resource Management"],
     linkedin: "https://linkedin.com/in/tannu-priya"
   },
   {
     name: "Kajal Kumari",
     role: "HR",
     image: hr,
-    description: "Kajal has spent nearly 8 years in managing human resources. With her experience she is redefining the way companies approach talent to work for mutual growth by providing a healthy environment where everyone is able to grow in a more Organised way benefitting companies on one hand and nurturing talent on the other.",
+    description: "Kajal has spent nearly 8 years in managing Human Resources. With her experience she is redefining the way Companies approach talent to work for mutual growth by providing a healthy environment where everyone is able to grow in a more Organised way benefitting Companies on one hand and nurturing Talent on the other.",
     expertise: ["Talent Acquisition", "Employee Relations", "HR Compliance"],
     linkedin: "https://www.linkedin.com/in/kajal-kumari-a1048b1b1/"
   },
   {
-    name: "Mukesh JHA",
+    name: "Mukesh Jha",
     role: "Operation Director",
     image: cto,
-    description: "He is a seasoned Blockchain enthusiast with nearly a decade of hands-on experience in the crypto space. An alumnus of Motilal Nehru National Institute of Technology, Mukesh blends deep technical knowledge in offering Blockchain services. Worked on 10+ startup ideas he knows well how Technology can help early stage startups to grow in a sustainable manner.",
+    description: "He is a seasoned Blockchain Enthusiast with nearly a decade of hands-on experience in the Crypto space. An alumnus of Motilal Nehru National Institute of Technology, Mukesh blends deep Technical knowledge in offering Blockchain services. Worked on 10+ startup ideas,he knows well how Technology can help early stage startups to grow in a Sustainable manner.",
     expertise: ["Tech Architecture", "System Scalability", "Engineering Leadership", "Blockchain"],
     linkedin: "https://www.linkedin.com/in/mukeshly/"
   }
