@@ -69,7 +69,7 @@ export default function Home() {
       answer: "FOUNDEROO is built specifically for First-time Founders, Solo Entrepreneurs, Studentpreneurs, and anyone with an Idea who wants a structured help to build the Startup."
     },
     {
-      question: "Does Founderoo provide any special oportunity for first-time founders?",
+      question: "Does Founderoo provide any special opportunity for first-time founders?",
       answer: "FOUNDEROO offers a Free plan for First-time Founders to access essential tools for a Startup to Grow. Paid upgrades are available for Advanced Features, Premium Resources, or Mentorship Access."
     },
     {
