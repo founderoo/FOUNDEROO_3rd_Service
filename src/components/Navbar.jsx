@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
 import { ProfileMenu } from './ProfileMenu';
 import logo from '@/assets/founderoo.webp';
-import { ArrowRight } from 'lucide-react';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,23 +19,23 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <nav className="flex items-center gap-6">
             <div className="md:flex items-center gap-6 hidden">
-              <Link to="/" className="text-sm font-medium md:hover:text-secondary transition-colors font-satoshi">
+              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
                 Founder
               </Link>
-              <Link to="/" className="text-sm font-medium md:hover:text-secondary transition-colors font-satoshi">
+              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
                 What We Offer
               </Link>
-             <Link to="/" className="text-sm font-medium md:hover:text-secondary transition-colors font-satoshi">
+              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
                 Pricing
               </Link>
-              <Link to="/" className="text-sm font-medium md:hover:text-secondary transition-colors font-satoshi">
+              <Link to="/" className="text-sm font-medium hover:text-secondary transition-colors font-satoshi">
                 Community
               </Link>
-              
+
               {!user && (
                 <Link
                   to="/register"
-                  className="md:block hidden text-sm font-medium md:hover:text-secondary transition-colors font-satoshi"
+                  className="md:block hidden text-sm font-medium hover:text-secondary transition-colors font-satoshi"
                 >
                   Register
                 </Link>
@@ -45,14 +44,13 @@ export function Navbar() {
             <div className="flex items-center gap-2">
               <ThemeToggle />
               <ProfileMenu />
-              
             </div>
             <button
-              className="md:hidden p-2 md:hover:bg-secondary md:hover:text-primary rounded-lg transition-colors"
+              className="md:hidden p-2 hover:bg-secondary rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <svg
-                className="h-6 w-6"
+                className="h-6 w-6 text-white dark:text-white transition-colors"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -68,65 +66,48 @@ export function Navbar() {
           </nav>
         </div>
       </div>
+
       {/* Mobile menu */}
       <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'} bg-primary pb-4`}>
         <div className="space-y-1 px-4">
-          <button
-            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+          <Link
+            to="/"
+            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
-              Founder
-            </Link>
-          </button>
-          <button
-            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            Founder
+          </Link>
+          <Link
+            to="/"
+            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
-              What We Offer
-            </Link>
-          </button>
-          <button
-            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            What We Offer
+          </Link>
+          <Link
+            to="/"
+            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
-              Pricing
-            </Link>
-          </button>
-          <button
-            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            Pricing
+          </Link>
+          <Link
+            to="/"
+            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
-              Community
-            </Link>
-          </button>
-          <button
-            className="w-full text-left active:bg-secondary/20 rounded transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            Community
+          </Link>
+          <Link
+            to="/"
+            className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
           >
-            <Link to="/" className="block text-sm font-medium font-satoshi py-2">
-              Ask Founderoo
-            </Link>
-          </button>
-          
+            Ask Founderoo
+          </Link>
+
           {!user && (
-            <button
-              className="w-full text-left active:bg-secondary/20 rounded transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-              style={{ WebkitTapHighlightColor: 'transparent' }}
+            <Link
+              to="/register"
+              className="block text-sm font-medium hover:text-secondary transition-colors font-satoshi py-2"
             >
-              <Link to="/register" className="block text-sm font-medium font-satoshi py-2">
-                Register
-              </Link>
-            </button>
+              Register
+            </Link>
           )}
         </div>
       </div>
