@@ -288,7 +288,7 @@ export default function Home() {
               {
                 name: "Krish",
                 role: "CEO, Board ki Padhai",
-                story: "I was just a college student with an Board tutoring idea. Founderoo not only funded us with ₹10 lakhs but connected me with ED-tech industry veterans who helped refine our product. We now have 50,000+ users!",
+                story: "I was just a college student with a Board tutoring idea. Founderoo not only funded us with ₹10 lakhs but connected me with ED-tech industry veterans who helped refine our product. We now have 50,000+ users!",
                 avatar: krish
               },
               {
