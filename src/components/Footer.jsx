@@ -32,7 +32,7 @@ export function Footer() {
               The Operating System for Founders.
             </p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Building innovative solutions that help businesses grow and thrive in the digital age.
+              Building innovative solutions that help Startup grow and thrive in the digital age.
             </p>
             <div className="flex space-x-4">
               <a
