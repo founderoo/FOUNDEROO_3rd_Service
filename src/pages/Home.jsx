@@ -211,7 +211,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
+     
 {/* How It Works */}
 <section id="about" className="py-24 bg-background dark:bg-background/50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -253,7 +253,7 @@ export default function Home() {
       ].map((step) => (
         <Card
           key={step.step}
-          className="relative group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg h-full flex flex-col justify-between"
+          className="relative group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg h-full flex flex-col justify-between min-h-[500px]"
         >
           <CardHeader className="text-center">
             <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
