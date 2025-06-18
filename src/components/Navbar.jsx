@@ -47,7 +47,7 @@ export function Navbar() {
               <ProfileMenu />
               
             </div>
-            <button
+{/*             <button
               className="md:hidden p-2 hover:bg-secondary hover:text-primary rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -64,7 +64,26 @@ export function Navbar() {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-            </button>
+            </button> */}
+            <button
+  className="md:hidden p-2 hover:bg-secondary rounded-lg transition-colors"
+  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+>
+  <svg
+    className="h-6 w-6 text-white dark:text-white"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M4 6h16M4 12h16M4 18h16"
+    />
+  </svg>
+</button>
+
           </nav>
         </div>
       </div>
