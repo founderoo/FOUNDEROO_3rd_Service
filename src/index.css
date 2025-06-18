@@ -232,6 +232,7 @@
   background-color: rgba(0, 0, 0, 0.9) !important;
   color: white !important;
 }
-theme-toggle-button:focus:not(:hover) svg {
-  color: hsl(var(--foreground));
+
+.theme-toggle-button:focus:not(:hover) svg {
+  color: hsl(var(--foreground)) !important;
 }
