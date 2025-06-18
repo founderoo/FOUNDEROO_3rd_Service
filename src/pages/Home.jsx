@@ -62,8 +62,7 @@ export default function Home() {
     },
     {
       question: " Who is Founderoo for?",
-      answer: "Founderoo is built especially for first-time founders who:Have an idea but don’t know where to startNeed a roadmap to build a digital business or startup Want access to tools, templates, and real guidance"
-    },
+      answer: "Founderoo is built especially for first-time founders who Have an idea but need guidance to start,need a roadmap to build a Digital Business or Startup or need access to tools templates and real guidance},
     {
       question: "Who does Founderoo work for?",
       answer: "FOUNDEROO is built specifically for first-time founders, solo entrepreneurs, studentpreneurs, and anyone with an idea who wants structured help to build their startup."
