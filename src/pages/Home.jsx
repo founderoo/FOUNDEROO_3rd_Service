@@ -69,7 +69,7 @@ export default function Home() {
       answer: "FOUNDEROO is built specifically for First-time Founders, Solo Entrepreneurs, Studentpreneurs, and anyone with an Idea who wants a structured help to build the Startup."
     },
     {
-      question: "Does Founderoo provide any special oportunity for first-time founders?",
+      question: "Does Founderoo provide any special opportunity for first-time founders?",
       answer: "FOUNDEROO offers a Free plan for First-time Founders to access essential tools for a Startup to Grow. Paid upgrades are available for Advanced Features, Premium Resources, or Mentorship Access."
     },
     {
@@ -211,64 +211,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section id="about" className="py-24 bg-background dark:bg-background/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">How Does Founderoo Provides  Funding</h2>
-            <p className="text-xl text-muted-foreground">Three simple steps to turn your idea into a Funded Startup</p>
-          </div>
+     
+{/* How It Works */}
+<section id="about" className="py-24 bg-background dark:bg-background/50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-foreground mb-4">
+        How Does Founderoo Provides Funding
+      </h2>
+      <p className="text-xl text-muted-foreground">
+        Three simple steps to turn your idea into a Funded Startup
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                step: "1",
-                title: "Apply Now",
-                description: "Submit your Startup Idea, Our Team will review your application thoroughly",
-                fee: "₹499 registration fee",
-                note: "Non-refundable application review",
-                icon: <Target className="h-8 w-8" />
-              },
-              {
-                step: "2",
-                title: "Shortlisted?",
-                description: "If selected in first round, you will be interviewed by our Investment Commeittee and Expert Mentors.",
-                fee: "₹1,999 for final interview",
-                note: "50% refundable if not selected",
-                icon: <Users className="h-8 w-8" />
-              },
-              {
-                step: "3",
-                title: "Get Funded",
-                description: "Selected Founders will receive Funding, Personalized Mentorship, and access to our extensive network of industry experts.",
-                fee: "Access to Capital",
-                note: "Plus mentorship and network",
-                icon: <Rocket className="h-8 w-8" />
-              }
-            ].map((step) => (
-              <Card key={step.step} className="relative group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {step.step}
-                  </div>
-                  <div className="text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                    {step.icon}
-                  </div>
-                  <CardTitle className="text-xl font-bold">{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground dark:text-muted-foreground/90 mb-6">{step.description}</p>
-                  <div className="p-4 bg-primary/10 rounded-lg">
-                    <div className="font-semibold text-primary">{step.fee}</div>
-                    <div className="text-sm text-muted-foreground">{step.note}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      {[
+        {
+          step: "1",
+          title: "Apply Now",
+          description: "Submit your Startup Idea, Our Team will review your application thoroughly",
+          fee: "₹499 registration fee",
+          note: "Non-refundable application review",
+          icon: <Target className="h-8 w-8" />
+        },
+        {
+          step: "2",
+          title: "Shortlisted?",
+          description: "If selected in first round, you will be interviewed by our Investment Committee and Expert Mentors.",
+          fee: "₹1,999 for final interview",
+          note: "50% refundable if not selected",
+          icon: <Users className="h-8 w-8" />
+        },
+        {
+          step: "3",
+          title: "Get Funded",
+          description: "Selected Founders will receive Funding, Personalized Mentorship, and access to our extensive network of industry experts.",
+          fee: "Access to Capital",
+          note: "Plus mentorship and network",
+          icon: <Rocket className="h-8 w-8" />
+        }
+      ].map((step) => (
+        <Card
+          key={step.step}
+          className="relative group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg h-full flex flex-col justify-between"
+        >
+          <CardHeader className="text-center">
+            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              {step.step}
+            </div>
+            <div className="text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+              {step.icon}
+            </div>
+            <CardTitle className="text-xl font-bold">{step.title}</CardTitle>
+          </CardHeader>
+          <CardContent className="text-center">
+            <p className="text-muted-foreground dark:text-muted-foreground/90 mb-6">{step.description}</p>
+            <div className="p-4 bg-primary/10 rounded-lg">
+              <div className="font-semibold text-primary">{step.fee}</div>
+              <div className="text-sm text-muted-foreground">{step.note}</div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
       {/* Success Stories */}
       <section id="success-stories" className="py-24 bg-muted/50 dark:bg-muted/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
