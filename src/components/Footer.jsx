@@ -63,14 +63,12 @@ export function Footer() {
             <h4 className="text-lg font-semibold text-white">Products</h4>
             <div className="space-y-2">
               {['Web Development', 'Mobile Apps', 'Cloud Solutions', 'Consulting', 'Support'].map((item) => (
-                <a
+                <span
                   key={item}
-                  href="#"
-                  onClick={handleComingSoonClick}
                   className="text-gray-300 hover:text-secondary transition-colors text-sm block"
                 >
                   {item}
-                </a>
+                </span>
               ))}
             </div>
           </div>
@@ -100,13 +98,12 @@ export function Footer() {
               >
                 Careers
               </a>
-              <a
-                href="#"
-                onClick={handleComingSoonClick}
+              <span
+                
                 className="text-gray-300 hover:text-secondary transition-colors text-sm block"
               >
                 Blog
-              </a>
+              </span>
               <a
                 href="https://www.linkedin.com/newsletters/the-founder-s-signal-7338714487572570114"
                 target="_blank"
