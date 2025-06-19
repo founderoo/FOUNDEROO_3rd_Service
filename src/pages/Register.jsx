@@ -103,10 +103,10 @@ const Register = () => {
     <div className="min-h-screen flex items-center justify-center bg-background px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8 p-6 sm:p-8 bg-card rounded-lg shadow-lg">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[#5F2B8D] font-satoshi">Create Account</h2>
-          <p className="mt-2 text-sm text-[#3E3E3E] font-satoshi">
+          <h2 className="text-3xl font-bold tracking-tight text-[#5F2B8D] dark:text-white font-satoshi">Create Account</h2>
+          <p className="mt-2 text-sm text-[#3E3E3E] dark:text-white font-satoshi">
             Already have an account?{' '}
-            <Link to="/login" className="text-[#5F2B8D] hover:underline">
+            <Link to="/login" className="text-[#5F2B8D] dark:text-[#FFD64A] hover:underline">
               Sign in
             </Link>
           </p>
@@ -207,7 +207,7 @@ const Register = () => {
             <span className="w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background px-2 text-muted-foreground">
+            <span className="bg-background px-2 text-muted-foreground dark:text-white">
               Or continue with
             </span>
           </div>
@@ -216,7 +216,7 @@ const Register = () => {
         <Button
           type="button"
           variant="outline"
-          className="w-full border-[#3E3E3E] text-[#3E3E3E] hover:bg-[#FFD64A] font-satoshi"
+          className="w-full border-[#3E3E3E] dark:border-white text-[#3E3E3E] dark:text-white hover:bg-[#FFD64A] font-satoshi"
           onClick={handleGoogleSignIn}
           disabled={loading}
         >
