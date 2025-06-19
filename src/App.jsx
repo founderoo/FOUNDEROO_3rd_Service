@@ -12,6 +12,11 @@ import { Toaster } from './components/ui/toaster';
 import {FounderForm} from './components/FounderForm';
 import { useEffect } from 'react';
 import  OurTeam  from './pages/Ourteam';
+import AboutUs from './pages/About';
+import RefundPolicy from './pages/RefundPolicy';
+import TermsAndConditions from './pages/Terms';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import ContactUs from './pages/ContactUs';
 
 
 function App() {
@@ -45,6 +50,11 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/founder-form" element={<FounderForm />} />
               <Route path="/our-team" element={<OurTeam />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/refund-policy" element={<RefundPolicy />} />
+              <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/contact-us" element={<ContactUs />} />
             </Routes>
           </main>
           <Footer />

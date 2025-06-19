@@ -80,8 +80,8 @@ export function Footer() {
             <h4 className="text-lg font-semibold text-white">Company</h4>
             <div className="space-y-2">
               <a
-                href="#"
-                onClick={handleComingSoonClick}
+                href="/about-us"
+               
                 className="text-gray-300 hover:text-secondary transition-colors text-sm block"
               >
                 About Us
@@ -162,30 +162,28 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6">
               <a
-                href="#"
+                href="/privacy-policy"
                 className="text-sm text-gray-400 hover:text-secondary transition-colors"
               >
                 Privacy Policy
               </a>
               <a
-                href="#"
+                href="/terms-and-conditions"
                 className="text-sm text-gray-400 hover:text-secondary transition-colors"
               >
                 Terms of Service
               </a>
               <a
-                href="#"
+                href="/refund-policy"
                 className="text-sm text-gray-400 hover:text-secondary transition-colors"
               >
-                Cookie Policy
+                Refund Policy
               </a>
               <a
-                href="https://github.com/founderoo"
+                href="/contact-us"
                 className="text-sm text-gray-400 hover:text-secondary transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                GitHub
+                Contact Us
               </a>
             </div>
           </div>
