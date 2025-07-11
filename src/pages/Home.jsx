@@ -111,13 +111,23 @@ export default function Home() {
               <div className="text-foreground mt-2">for Founders</div>
             </h1>
             <p className="text-3xl sm:text-4xl text-muted-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed font-medium">
-              <TypewriterEffectSmooth
+{/*               <TypewriterEffectSmooth
                 className="text-3xl sm:text-4xl"
                 words={[
                   { text: "Direction", className: "text-muted-foreground/90" },
                   { text: "for", className: "text-muted-foreground/90" },
                   { text: "Every", className: "text-muted-foreground/90" },
                   { text: "Dream", className: "text-muted-foreground/90" }
+                ]}
+                cursorClassName="bg-primary"
+              /> */}
+               <TypewriterEffectSmooth
+                className="text-3xl sm:text-4xl"
+                words={[
+                  { text: "For The", className: "text-muted-foreground/90" },
+                  { text: "FOUNDERS", className: "text-muted-foreground/90" },
+                  { text: "By The", className: "text-muted-foreground/90" },
+                  { text: "FOUNDERS", className: "text-muted-foreground/90" }
                 ]}
                 cursorClassName="bg-primary"
               />
