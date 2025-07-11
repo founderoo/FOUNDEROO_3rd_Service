@@ -125,9 +125,9 @@ export default function Home() {
                 className="text-3xl sm:text-4xl"
                 words={[
                   { text: "For The", className: "text-muted-foreground/90" },
-                  { text: "FOUNDERS", className: "text-muted-foreground/90" },
+                  { text: "Founders", className: "text-muted-foreground/90" },
                   { text: "By The", className: "text-muted-foreground/90" },
-                  { text: "FOUNDERS", className: "text-muted-foreground/90" }
+                  { text: "Founders", className: "text-muted-foreground/90" }
                 ]}
                 cursorClassName="bg-primary"
               />
