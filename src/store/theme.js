@@ -4,11 +4,7 @@ import { persist } from 'zustand/middleware';
 export const useTheme = create(
   persist(
     (set) => ({
-      theme: typeof window !== 'undefined' 
-        ? window.matchMedia('(prefers-color-scheme: dark)').matches 
-          ? 'dark' 
-          : 'light'
-        : 'light',
+      theme: 'light', // Always default to light theme
       toggleTheme: () =>
         set((state) => ({
           theme: state.theme === 'light' ? 'dark' : 'light',
