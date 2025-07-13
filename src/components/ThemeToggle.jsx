@@ -11,7 +11,6 @@ export function ThemeToggle() {
     setIsClicked(true);
     toggleTheme();
     
-    // Reset the clicked state after animation
     setTimeout(() => {
       setIsClicked(false);
     }, 200);
@@ -20,17 +19,23 @@ export function ThemeToggle() {
   return (
     <Button
       variant="ghost"
-      size="icon"
+      size="sm"
       onClick={handleClick}
-      className={`text-white touch-none select-none bg-transparent md:hover:bg-secondary/20 md:hover:text-secondary active:bg-secondary/10 transition-all duration-200 ${
-        isClicked ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
+      className={`relative overflow-hidden rounded-lg p-2 text-gray-700 dark:text-gray-300 hover:text-[#5F2B8D] dark:hover:text-[#9333EA] hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 ${
+        isClicked ? 'scale-95' : 'scale-100'
       }`}
       style={{ 
         WebkitTapHighlightColor: 'transparent', 
         touchAction: 'manipulation' 
       }}
     >
-      {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+      <span className="relative z-10 flex items-center justify-center">
+        {theme === 'light' ? (
+          <Moon className="h-5 w-5" />
+        ) : (
+          <Sun className="h-5 w-5" />
+        )}
+      </span>
     </Button>
   );
 }

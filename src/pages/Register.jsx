@@ -103,10 +103,10 @@ const Register = () => {
     <div className="min-h-screen flex items-center justify-center bg-background px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8 p-6 sm:p-8 bg-card rounded-lg shadow-lg">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[#5F2B8D] dark:text-white font-satoshi">Create Account</h2>
+          <h2 className="text-3xl font-bold tracking-tight dark:text-white font-satoshi">Create Account</h2>
           <p className="mt-2 text-sm text-[#3E3E3E] dark:text-white font-satoshi">
             Already have an account?{' '}
-            <Link to="/login" className="text-[#5F2B8D] dark:text-[#FFD64A] hover:underline">
+            <Link to="/login" className="dark:text-[#FFD64A] hover:underline">
               Sign in
             </Link>
           </p>
@@ -124,6 +124,7 @@ const Register = () => {
                 value={formData.username}
                 onChange={handleChange}
                 placeholder="Enter your username"
+                className="text-foreground"
               />
             </div>
 
@@ -137,6 +138,7 @@ const Register = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
+                className="text-foreground"
               />
             </div>
 
@@ -151,7 +153,7 @@ const Register = () => {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="Enter your password"
-                  className="pr-10"
+                  className="pr-10 text-foreground"
                 />
                 <button
                   type="button"
@@ -177,7 +179,7 @@ const Register = () => {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="Confirm your password"
-                  className="pr-10"
+                  className="pr-10 text-foreground"
                 />
                 <button
                   type="button"
@@ -195,7 +197,7 @@ const Register = () => {
 
           <Button
             type="submit"
-            className="w-full bg-[#5F2B8D] hover:bg-[#FFD64A] text-white hover:text-[#3E3E3E] font-satoshi"
+            className="w-full bg-primary hover:bg-[#FFD64A] text-white hover:text-[#3E3E3E] font-satoshi"
             disabled={loading}
           >
             {loading ? 'Creating Account...' : 'Create Account'}

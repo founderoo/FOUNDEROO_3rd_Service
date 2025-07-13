@@ -45,16 +45,16 @@ export default function OurTeam() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background dark:bg-background/50">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Back Button */}
-      <div className="container mx-auto px-4 sm:px-6 pt-8">
+      <div className="container mx-auto px-4 sm:px-6 pt-20 sm:pt-24">
         <Button
           variant="ghost"
           onClick={() => {
             window.scrollTo(0, 0);
             navigate("/");
           }}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
         >
           <ArrowLeft size={18} />
           Back to Home
@@ -62,69 +62,71 @@ export default function OurTeam() {
       </div>
 
       {/* Team Section */}
-      <section className="py-12">
+      <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Meet the Team</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Meet the Team</h2>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">
               The experienced professionals behind your startup success
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
             {teamMembers.map((member, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-border/50 shadow-lg overflow-hidden bg-card/95 backdrop-blur-sm w-full max-w-sm h-full flex flex-col"
+                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 w-full max-w-sm h-full flex flex-col"
               >
-                <div className="relative">
-                  <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/20 transition-all duration-500"></div>
-                  <CardHeader className="text-center relative z-10 pb-4">
-                    <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden">
-                      {member.image ? (
-                        <img 
-                          src={member.image} 
-                          alt={member.name} 
-                          className="rounded-full w-full h-full object-cover" 
-                        />
-                      ) : (
-                        <User className="text-white" />
-                      )}
-                    </div>
-                    <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors duration-300 mb-2">
-                      {member.name}
-                    </CardTitle>
-                    <CardDescription className="text-primary font-semibold text-base">
-                      {member.role}
-                    </CardDescription>
-                  </CardHeader>
-                </div>
+                <CardHeader className="text-center pb-4">
+                  <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-300 shadow-md overflow-hidden">
+                    {member.image ? (
+                      <img 
+                        src={member.image} 
+                        alt={member.name} 
+                        className="w-full h-full object-cover" 
+                      />
+                    ) : (
+                      <User className="text-white" />
+                    )}
+                  </div>
+                  <CardTitle className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300 mb-2">
+                    {member.name}
+                  </CardTitle>
+                  <CardDescription className="text-primary font-medium text-base">
+                    {member.role}
+                  </CardDescription>
+                </CardHeader>
                 <CardContent className="flex-1 flex flex-col justify-between p-6 pt-0">
                   <div className="space-y-4 flex-1">
-                    <p className="text-muted-foreground dark:text-muted-foreground/90 text-sm leading-relaxed text-left">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                       {member.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 justify-start">
+                    <div className="flex flex-wrap gap-2">
                       {member.expertise.map((skill, skillIndex) => (
                         <Badge 
                           key={skillIndex} 
                           variant="secondary" 
-                          className="text-xs bg-primary/10 text-primary px-2 py-1"
+                          className="text-xs bg-primary/10 text-primary"
                         >
                           {skill}
                         </Badge>
                       ))}
                     </div>
                   </div>
-                  <div className="flex justify-center pt-4 mt-4 border-t border-border/20">
-                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                  <div className="flex justify-center pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
+                    <a 
+                      href={member.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center"
+                    >
                       <Button 
                         variant="ghost" 
                         size="sm" 
-                        className="group-hover:bg-primary/10 transition-colors duration-300 px-4 py-2"
+                        className="hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300"
                       >
                         <Linkedin className="h-4 w-4 text-primary mr-2" />
-                        Connect
+                        <span className="text-gray-700 dark:text-gray-300">Connect</span>
                       </Button>
                     </a>
                   </div>

@@ -70,10 +70,10 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-background px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8 p-6 sm:p-8 bg-card rounded-lg shadow-lg">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[#5F2B8D] dark:text-white font-satoshi">Welcome Back</h2>
+          <h2 className="text-3xl font-bold tracking-tight dark:text-white font-satoshi">Welcome Back</h2>
           <p className="mt-2 text-sm text-[#3E3E3E] dark:text-white font-satoshi">
             Don't have an account?{' '}
-            <Link to="/register" className="text-[#5F2B8D] dark:text-[#FFD64A] hover:underline">
+            <Link to="/register" className="dark:text-[#FFD64A] hover:underline">
               Sign up
             </Link>
           </p>
@@ -91,7 +91,7 @@ const Login = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
-                className="font-satoshi"
+                className="font-satoshi text-foreground"
               />
             </div>
 
@@ -106,7 +106,7 @@ const Login = () => {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="Enter your password"
-                  className="font-satoshi pr-10"
+                  className="font-satoshi pr-10 text-foreground"
                 />
                 <button
                   type="button"
@@ -124,7 +124,7 @@ const Login = () => {
 
           <Button
             type="submit"
-            className="w-full bg-[#5F2B8D] hover:bg-[#FFD64A] text-white hover:text-[#3E3E3E] font-satoshi"
+            className="w-full bg-primary hover:bg-[#FFD64A] text-white hover:text-[#3E3E3E] font-satoshi"
             disabled={loading}
           >
             {loading ? 'Signing in...' : 'Sign in'}

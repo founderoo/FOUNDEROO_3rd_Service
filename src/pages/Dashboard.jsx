@@ -79,7 +79,7 @@ export default function Dashboard() {
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
                   <span>Application Status</span>
-                  <span className="text-primary font-medium">In Review</span>
+                  <span className="font-medium">In Review</span>
                 </div>
                 <Progress value={33} className="h-2" />
                 <div className="grid grid-cols-3 text-xs text-muted-foreground mt-1">
