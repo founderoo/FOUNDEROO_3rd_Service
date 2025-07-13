@@ -23,11 +23,11 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white dark:via-background/50 dark:to-background"></div>
       </div>
 
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div className="relative w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="text-center space-y-8 sm:space-y-12">
           {/* Main Heading */}
           <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl mx-auto px-2">
               <span className="text-gray-900 dark:text-white">
                 The Operating System 
               </span>
@@ -35,8 +35,8 @@ export default function Hero() {
                 for Founders
               </span>
             </h1>
-            <div className="min-h-[6rem] flex justify-center items-center py-4">
-              <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl px-2">
+            <div className="min-h-[8rem] sm:min-h-[6rem] flex justify-center items-center py-4 px-2">
+              <div className="w-full px-0">
                 <TypewriterEffectSmooth
                   words={[
                     { text: "For The", className: "text-gray-600 dark:text-gray-300" },

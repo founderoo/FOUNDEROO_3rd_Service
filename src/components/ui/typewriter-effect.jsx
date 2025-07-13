@@ -87,8 +87,8 @@ export const TypewriterEffectSmooth = ({
   cursorClassName
 }) => {
   return (
-    <div className={cn("flex items-center justify-center", className)}>
-      <div className="flex flex-wrap gap-3 text-base sm:text-xl md:text-3xl lg:text-4xl font-medium">
+    <div className={cn("flex items-center justify-center w-full", className)}>
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3 text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
         {words.map((word, idx) => (
           <div key={idx} className={cn(word.className)}>
             {word.text}
@@ -107,7 +107,7 @@ export const TypewriterEffectSmooth = ({
             repeatType: "reverse",
           }}
           className={cn(
-            "block rounded-sm w-[4px] h-6 sm:h-8 md:h-10 lg:h-12 bg-blue-500 ml-1",
+            "block rounded-sm w-[4px] h-8 sm:h-8 md:h-10 lg:h-12 bg-blue-500 ml-1",
             cursorClassName
           )}
         />
