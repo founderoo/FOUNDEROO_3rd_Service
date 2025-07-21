@@ -1,11 +1,14 @@
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "@/store/auth";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Layout, MessageSquare, PieChart } from "lucide-react";
+import SitReadingDoodle from "@/assets/SitReadingDoodle.png";
+import ChatbotDialog from "@/components/ChatbotDialog";
+import { useState } from "react";
 
 export default function Hero() {
   const { user } = useAuthStore();
   const navigate = useNavigate();
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const handleApplyNow = () => {
     if (user) {
@@ -16,149 +19,144 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex items-center justify-center overflow-hidden bg-white dark:bg-background pt-16 mt-0 border-t-0">
+    <section className="relative bg-white pt-6 border-t-0 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] dark:opacity-[0.05]"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white dark:via-background/50 dark:to-background"></div>
+        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white"></div>
       </div>
 
-      <div className="relative w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="text-center space-y-8 sm:space-y-12">
-          {/* Main Heading */}
-          <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl mx-auto px-2">
-              <span className="text-gray-900 dark:text-white">
-                The Operating System 
-              </span>
-              <span className="block mt-2 text-[#5F2B8D] dark:text-[#9333EA]">
-                for Founders
-              </span>
-            </h1>
-            <div className="min-h-[8rem] sm:min-h-[6rem] flex justify-center items-center py-4 px-2">
-              <div className="w-full px-0">
-                <TypewriterEffectSmooth
-                  words={[
-                    { text: "For The", className: "text-gray-600 dark:text-gray-300" },
-                    { text: "Founders", className: "text-[#5F2B8D] dark:text-[#9333EA]" },
-                    { text: "By The", className: "text-gray-600 dark:text-gray-300" },
-                    { text: "Founders", className: "text-[#5F2B8D] dark:text-[#9333EA]" }
-                  ]}
-                  cursorClassName="bg-[#5F2B8D] dark:bg-[#9333EA]"
-                />
-              </div>
-            </div>
-          </div>
+      <div className="relative w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-4">
+        {/* Hero Section with Two Columns */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 lg:gap-8">
+          {/* Left Column - Content */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-4 pt-4 lg:pt-0 z-10 lg:pl-0">
+            {/* Main Heading */}
+            <div className="content-group-spacing">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-high-contrast">
+                <span className="block sm:inline">The Operating</span>{" "}
+                <span className="block sm:inline">System for</span>
+                <span className="block text-brand-purple">First Time Founders</span>
+              </h1>
 
-          {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button
-              onClick={handleApplyNow}
-              className="group relative overflow-hidden rounded-lg bg-[#5F2B8D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl dark:bg-[#9333EA]"
-            >
-              <div className="absolute inset-0 bg-white/10 transition-transform duration-200 group-hover:translate-x-full"></div>
-              <span className="relative flex items-center gap-2">
-                Get Funded
-                <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
-              </span>
-            </button>
-          </div>
-
-          {/* Feature Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-16 max-w-4xl mx-auto">
-            {/* Pitch OS */}
-            <div className="group p-6 bg-white dark:bg-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#5F2B8D]/10 dark:bg-[#9333EA]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#5F2B8D]/20 dark:group-hover:bg-[#9333EA]/30 transition-colors">
-                  <div className="grid grid-cols-2 gap-1">
-                    <div className="w-2 h-2 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-sm"></div>
-                    <div className="w-2 h-2 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-sm"></div>
-                    <div className="w-2 h-2 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-sm"></div>
-                    <div className="w-2 h-2 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-sm"></div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-[#5F2B8D] dark:group-hover:text-[#9333EA] transition-colors">Pitch OS</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Map out your Business model and Startup roadmap</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Founder Docs */}
-            <div className="group p-6 bg-white dark:bg-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#5F2B8D]/10 dark:bg-[#9333EA]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#5F2B8D]/20 dark:group-hover:bg-[#9333EA]/30 transition-colors">
-                  <div className="w-6 h-6 border-2 border-[#5F2B8D] dark:border-[#9333EA] rounded flex flex-col">
-                    <div className="flex-1 border-b border-[#5F2B8D] dark:border-[#9333EA]"></div>
-                    <div className="flex-1 border-b border-[#5F2B8D] dark:border-[#9333EA]"></div>
-                    <div className="flex-1"></div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-[#5F2B8D] dark:group-hover:text-[#9333EA] transition-colors">Founder Docs</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Generate and manage your key Startup Documents</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Tasks */}
-            <div className="group p-6 bg-white dark:bg-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#5F2B8D]/10 dark:bg-[#9333EA]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#5F2B8D]/20 dark:group-hover:bg-[#9333EA]/30 transition-colors">
-                  <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-1">
-                      <div className="w-1 h-1 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-full"></div>
-                      <div className="w-3 h-0.5 bg-[#5F2B8D] dark:bg-[#9333EA] rounded"></div>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <div className="w-1 h-1 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-full"></div>
-                      <div className="w-3 h-0.5 bg-[#5F2B8D] dark:bg-[#9333EA] rounded"></div>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <div className="w-1 h-1 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-full"></div>
-                      <div className="w-3 h-0.5 bg-[#5F2B8D] dark:bg-[#9333EA] rounded"></div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-[#5F2B8D] dark:group-hover:text-[#9333EA] transition-colors">Tasks</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Organize and track your to-dos and milestones</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Ask Founderoo */}
-            <div className="group p-6 bg-white dark:bg-card rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#5F2B8D]/10 dark:bg-[#9333EA]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#5F2B8D]/20 dark:group-hover:bg-[#9333EA]/30 transition-colors">
-                  <div className="w-6 h-6 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-[#5F2B8D] dark:group-hover:text-[#9333EA] transition-colors">Ask Founderoo</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Get answers and advice from our AI assistant</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Text */}
-          <div className="max-w-3xl mx-auto mt-16 px-4">
-            <div className="relative p-6 sm:p-8 bg-white dark:bg-card rounded-2xl shadow-sm">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="inline-block px-4 py-2 bg-[#5F2B8D] dark:bg-[#9333EA] text-white text-sm font-medium rounded-full shadow-sm">
-                  Did you know?
-                </span>
-              </div>
-              <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 font-medium text-center leading-relaxed">
-                <span className="text-[#5F2B8D] dark:text-[#9333EA] font-bold">90%</span> of Startups fail - not because of bad ideas, but because of bad Execution.{" "}
-                <span className="text-[#5F2B8D] dark:text-[#9333EA] font-semibold">Founderoo helps First-time Founders avoid that trap.</span>
+              {/* Fact Text - More compact */}
+              <p className="text-base sm:text-lg lg:text-xl text-medium-contrast mt-4 leading-relaxed max-w-2xl">
+                <span className="font-semibold">90%</span> of Startups fail due to poor execution.{" "}
+                <span className="font-medium">Founderoo helps you avoid that trap.</span>
               </p>
+            </div>
+
+            {/* CTA Button - Positioned above the fold */}
+            <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start mt-6">
+              <div className="w-full sm:w-auto">
+                <button
+                  onClick={handleApplyNow}
+                  className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-yellow-500 hover:to-yellow-600 text-white hover:text-gray-900 px-6 py-3 rounded-lg font-semibold text-base shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 w-full sm:w-auto justify-center"
+                >
+                  Get Funded
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Doodle Image */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start lg:pl-8 mt-6 lg:mt-0">
+            <div className="relative">
+              <div className="absolute -top-10 -right-10 w-24 h-24 bg-pink-100/50 rounded-full z-0"></div>
+              <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-purple-100/50 rounded-full z-0"></div>
+              <img
+                src={SitReadingDoodle}
+                alt="Founder Reading"
+                className="relative max-w-full h-auto object-contain z-10"
+                style={{ maxHeight: "450px" }}
+              />
             </div>
           </div>
         </div>
       </div>
+
+      {/* Feature Cards - Centered Layout */}
+      <div id="feature" className="relative w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 section-spacing">
+        <h2 className="heading-h2 section-heading heading-spacing-large">Our Core Features</h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-xl-token">
+          {/* Pitch OS Card - Using brand purple with gradient */}
+          <div className="group relative bg-gradient-to-br from-brand-purple-100 to-brand-purple-200 rounded-xl-token overflow-hidden border border-brand-purple shadow-md-token card-hover lg:col-span-2">
+            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative card-padding h-full flex flex-col min-h-[240px]">
+              <div className="flex items-center justify-between mb-md-token">
+                <h3 className="heading-h3 feature-card-heading">
+                  Pitch OS
+                </h3>
+                <div className="w-12 h-12 bg-brand-purple-300 rounded-lg-token flex items-center justify-center group-hover:bg-brand-purple-400 transition-colors duration-300">
+                  <PieChart className="h-6 w-6 text-brand-purple-600" />
+                </div>
+              </div>
+              <p className="body-text-large feature-card-text mb-md-token flex-1">
+                Build comprehensive business models and startup roadmaps with precision.
+                Get investor-ready pitch decks and financial projections.
+              </p>
+              <div className="flex items-center text-brand-purple-600 font-semibold-token group-hover:translate-x-2 transition-transform duration-300">
+                <span className="mr-3">Start Building</span>
+                <ArrowRight className="h-5 w-5" />
+              </div>
+            </div>
+          </div>
+
+          {/* Ask Founderoo Card - Using brand yellow with gradient */}
+          <div
+            onClick={() => setIsChatOpen(true)}
+            className="group relative bg-gradient-to-br from-brand-yellow-100 to-brand-yellow-200 rounded-xl-token overflow-hidden border border-brand-yellow shadow-md-token card-hover cursor-pointer"
+          >
+            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative card-padding h-full flex flex-col min-h-[240px]">
+              <div className="flex items-center justify-between mb-md-token">
+                <h3 className="heading-h3 feature-card-heading">
+                  Ask Founderoo
+                </h3>
+                <div className="w-12 h-12 bg-brand-yellow-300 rounded-lg-token flex items-center justify-center group-hover:bg-brand-yellow-400 transition-colors duration-300">
+                  <MessageSquare className="h-6 w-6 text-brand-purple-600" />
+                </div>
+              </div>
+              <p className="body-text feature-card-text mb-md-token flex-1">
+                Get personalized advice from our AI assistant trained on startup best practices.
+              </p>
+              <div className="flex items-center text-brand-purple-600 font-semibold-token group-hover:translate-x-2 transition-transform duration-300">
+                <span className="mr-3">Ask Now</span>
+                <ArrowRight className="h-4 w-4" />
+              </div>
+            </div>
+          </div>
+
+          {/* Efficiency Card - Using brand purple light variant */}
+          <div className="group relative bg-gradient-to-br from-brand-purple-50 to-brand-purple-100 rounded-xl-token overflow-hidden border border-brand-purple-200 shadow-md-token card-hover lg:col-span-3">
+            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative card-padding h-full flex flex-col lg:flex-row lg:items-center lg:justify-between min-h-[120px]">
+              <div className="lg:flex-1 lg:pr-xl-token">
+                <div className="flex items-center mb-md-token">
+                  <h3 className="heading-h3 feature-card-heading mr-md-token">
+                    Efficiency
+                  </h3>
+                  <div className="w-12 h-12 bg-brand-purple-200 rounded-lg-token flex items-center justify-center group-hover:bg-brand-purple-300 transition-colors duration-300">
+                    <Layout className="h-6 w-6 text-brand-purple-600" />
+                  </div>
+                </div>
+                <p className="body-text feature-card-text mb-md-token lg:mb-0">
+                  Deliver faster, spend less: 50% savings across time and budget.
+                </p>
+              </div>
+              <div className="flex items-center text-brand-purple-600 font-semibold-token group-hover:translate-x-2 transition-transform duration-300 lg:flex-shrink-0">
+                <span className="mr-3">Start Saving</span>
+                <ArrowRight className="h-4 w-4" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Chat Dialog */}
+      <ChatbotDialog isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
     </section>
   );
 }

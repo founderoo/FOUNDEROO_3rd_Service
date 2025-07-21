@@ -106,9 +106,12 @@ const Register = () => {
           <h2 className="text-3xl font-bold tracking-tight dark:text-white font-satoshi">Create Account</h2>
           <p className="mt-2 text-sm text-[#3E3E3E] dark:text-white font-satoshi">
             Already have an account?{' '}
-            <Link to="/login" className="dark:text-[#FFD64A] hover:underline">
+            <Link
+              to="/login"
+              className="text-purple-600 dark:text-[#FFD64A] hover:underline">
               Sign in
             </Link>
+
           </p>
         </div>
 
@@ -124,7 +127,7 @@ const Register = () => {
                 value={formData.username}
                 onChange={handleChange}
                 placeholder="Enter your username"
-                className="text-foreground"
+                className="text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
               />
             </div>
 
@@ -138,7 +141,7 @@ const Register = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
-                className="text-foreground"
+                className="text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
               />
             </div>
 
@@ -153,7 +156,7 @@ const Register = () => {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="Enter your password"
-                  className="pr-10 text-foreground"
+                  className="pr-10 text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                 />
                 <button
                   type="button"
@@ -179,7 +182,7 @@ const Register = () => {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="Confirm your password"
-                  className="pr-10 text-foreground"
+                  className="pr-10 text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                 />
                 <button
                   type="button"

@@ -53,18 +53,6 @@ export default function Home() {
     {
       question: 'How does Founderoo help me build a Brand?',
       answer: 'FOUNDEROO provides you a Complete Brand-Building Toolkit including Software. We help you go from "Idea" to "Brand that Speaks."'
-    },
-    {
-      question: "How does payment work on Founderoo?",
-      answer: "You can Start by paying nothing and upgrade to a Paid Plan when you're ready to Purchase one-time service like Logo Design or Mentorship. Payments are safe, and invoices are always provided for transparency."
-    },
-    {
-      question: 'Who is a "Head" in Founderoo?',
-      answer: "A Head is an expert or mentor within our network, offering specialized services such as mentorship calls, branding and tech setup, funding preparation, and pitch deck reviews. You can explore their profile, read client reviews, and book sessions directly through the platform."
-    },
-    {
-      question: "How does a Head determine their rate?",
-      answer: "Each Head sets their own pricing based on the type of service offered—whether hourly, per session, or per project. Rates reflect their values, expertise, availability, and terms. You only pay for what you choose, with clear and transparent pricing displayed upfront."
     }
   ];
 
@@ -73,25 +61,25 @@ export default function Home() {
       {/* Chat Icon */}
       <button
         onClick={() => setIsChatOpen(true)}
-        className="fixed bottom-6 right-6 bg-[#5F2B8D] hover:bg-[#9333EA] text-white p-3 rounded-full shadow-lg transition-colors z-50 dark:bg-[#9333EA] dark:hover:bg-[#9333EA]/80"
+        className="fixed bottom-6 right-6 bg-gradient-to-br from-purple-600 to-purple-700 hover:from-yellow-500 hover:to-yellow-600 text-white hover:text-gray-900 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-[52] transform hover:scale-110"
         aria-label="Open Chat"
       >
         <MessageCircle size={24} />
       </button>
 
       <ChatbotDialog isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
-      
+
       {/* Hero Section */}
       <Hero />
 
       {/* How It Works */}
-      <section id="about" className="py-20 bg-white dark:bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <section id="about" className="py-2xl-token bg-white dark:bg-background">
+        <div className="max-w-7xl mx-auto px-md-token lg:px-3xl-token">
+          <div className="text-center mb-2xl-token">
+            <h2 className="heading-h2 section-heading mb-lg-token">
               How Does Founderoo Provides Funding
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <p className="text-xl text-gray-600 dark:text-gray-300 section-heading">
               Three simple steps to turn your idea into a Funded Startup
             </p>
           </div>
@@ -125,7 +113,7 @@ export default function Home() {
             ].map((step) => (
               <Card
                 key={step.step}
-                className="relative group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-card h-full flex flex-col justify-between"
+                className="relative group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-card h-full flex flex-col justify-between rounded-3xl"
               >
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -134,13 +122,13 @@ export default function Home() {
                   <div className="text-[#5F2B8D] dark:text-[#9333EA] mb-2 group-hover:scale-110 transition-transform duration-300">
                     {step.icon}
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">{step.title}</CardTitle>
+                  <CardTitle className="heading-h3 text-center text-gray-900 dark:text-white">{step.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-gray-600 dark:text-gray-300 mb-6">{step.description}</p>
-                  <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                    <div className="font-semibold text-[#5F2B8D] dark:text-[#9333EA]">{step.fee}</div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">{step.note}</div>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 body-text-align">{step.description}</p>
+                  <div className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-2xl">
+                    <div className="font-semibold text-[#5F2B8D] dark:text-[#9333EA] text-center">{step.fee}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 text-center">{step.note}</div>
                   </div>
                 </CardContent>
               </Card>
@@ -150,11 +138,11 @@ export default function Home() {
       </section>
 
       {/* Success Stories */}
-      <section id="success-stories" className="py-20 bg-gray-50 dark:bg-background/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Success Stories</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">Hear from founders who turned their ideas into thriving businesses with Founderoo's support</p>
+      <section id="success-stories" className="py-2xl-token bg-gray-50 dark:bg-background/80">
+        <div className="max-w-7xl mx-auto px-md-token lg:px-3xl-token">
+          <div className="text-center mb-2xl-token">
+            <h2 className="heading-h2 section-heading mb-lg-token">Success Stories</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 section-heading">Hear from founders who turned their ideas into thriving businesses with Founderoo's support</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -178,16 +166,16 @@ export default function Home() {
                 avatar: ravi
               }
             ].map((testimonial, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-500 hover:-translate-y-3 border border-gray-200 dark:border-gray-700 bg-white dark:bg-card">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-500 hover:-translate-y-3 border border-gray-200 dark:border-gray-700 bg-white dark:bg-card rounded-3xl">
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     {testimonial.avatar ? <img src={testimonial.avatar} alt={testimonial.name} className="rounded-full w-full h-full object-cover" /> : <User />}
                   </div>
-                  <CardTitle className="text-lg font-bold text-gray-900 dark:text-white">{testimonial.name}</CardTitle>
+                  <CardTitle className="heading-h3 text-center text-gray-900 dark:text-white">{testimonial.name}</CardTitle>
                   <CardDescription className="text-[#5F2B8D] dark:text-[#9333EA] font-medium">{testimonial.role}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 italic">"{testimonial.story}"</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 italic body-text-align">"{testimonial.story}"</p>
                   <div className="flex justify-center">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-5 w-5 text-[#FFD64A] fill-current" />
@@ -201,118 +189,127 @@ export default function Home() {
       </section>
 
       {/* founder section  */}
-      <section id="founder" className="py-20 bg-white dark:bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Founder's Vision</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">The visionary behind Founderoo</p>
+      <section id="founder" className="relative py-2xl-token lg:py-3xl-token bg-gray-50 dark:bg-neutral-900 overflow-hidden">
+        {/* Decorative background shapes */}
+        <div
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[900px] h-[900px] bg-[#5F2B8D] dark:bg-[#9333EA] opacity-5 rounded-full z-0"
+          aria-hidden="true"
+        />
+        <div className="relative max-w-6xl mx-auto px-md-token sm:px-lg-token lg:px-3xl-token flex flex-col lg:flex-row items-center gap-16 z-10">
+
+          {/* Founder Image */}
+          <div className="w-full lg:w-[42%] flex justify-center lg:justify-end mb-12 lg:mb-0">
+            <div className="overflow-hidden rounded-2xl shadow-xl border border-gray-200 dark:border-neutral-800 bg-white">
+              <img
+                src={founder.image}
+                alt={founder.name}
+                className="w-[340px] h-[420px] object-cover object-top"
+              />
+            </div>
           </div>
 
-          <div className="flex justify-center">
-            <Card className="group hover:shadow-xl transition-all duration-500 hover:-translate-y-4 border border-gray-200 dark:border-gray-700 bg-white dark:bg-card max-w-2xl">
-              <div className="relative">
-                <CardHeader className="text-center relative z-10">
-                  <div className="w-32 h-32 bg-[#5F2B8D] dark:bg-[#9333EA] rounded-full flex items-center justify-center text-3xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    {founder.image ? <img src={founder.image} alt={founder.name} className="rounded-full w-full h-full object-cover" /> : <User />}
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-[#5F2B8D] dark:group-hover:text-[#9333EA] transition-colors duration-300">{founder.name}</CardTitle>
-                  <CardDescription className="text-[#5F2B8D] dark:text-[#9333EA] font-semibold text-lg">{founder.role}</CardDescription>
-                </CardHeader>
-              </div>
-              <CardContent className="space-y-4">
-                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed text-center">{founder.description}</p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {founder.expertise.map((skill, skillIndex) => (
-                    <Badge key={skillIndex} variant="secondary" className="text-sm bg-[#5F2B8D]/10 dark:bg-[#9333EA]/10 text-[#5F2B8D] dark:text-[#9333EA]">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="flex justify-center pt-4">
-                  <a href={founder.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Button variant="ghost" size="sm" className="group-hover:bg-[#5F2B8D]/10 dark:group-hover:bg-[#9333EA]/10 transition-colors duration-300">
-                      <Linkedin className="h-5 w-5 text-[#5F2B8D] dark:text-[#9333EA]" />
-                      <span className="ml-2 text-gray-900 dark:text-white">Connect on LinkedIn</span>
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+          {/* Founder Info */}
+          <div className="w-full lg:w-[58%] flex flex-col justify-center">
+            <h2 className="heading-h1 body-text-align mb-3">
+              {founder.name.split(" ")[0]}<br />
+              <span className="text-[#FFD64A]">{founder.name.split(" ")[1]}</span>
+            </h2>
+            <h3 className="heading-h3 body-text-align mb-6">{founder.role}</h3>
+            <p className="text-lg text-gray-600 dark:text-gray-120 mb-7 max-w-2xl body-text-align">
+              {founder.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {founder.expertise.map((skill, i) => (
+                <Badge key={i} className="bg-[#F4F3F8] text-[#5F2B8D] border-none dark:bg-white/10 dark:text-white text-[14px] font-semibold">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+            <div>
+              <a
+                href={founder.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2 bg-transparent border-2 border-[#5F2B8D] text-[#5F2B8D] hover:bg-[#5F2B8D] hover:text-white rounded-lg font-medium text-sm transition-all duration-300 transform hover:scale-105"
+              >
+                <Linkedin className="h-4 w-4" />
+                Connect on LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section id="faq" className="py-20 bg-gray-50 dark:bg-background/80">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">Everything you need to know about the application process</p>
+      {/* FAQ - Minimal and compact */}
+      <section id="faq" className="py-16 bg-gray-50 dark:bg-background/80">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-gray-600 dark:text-gray-300">Everything you need to know about the application process</p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
-              <Card key={index} className="transition-all duration-300 hover:shadow-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-card">
-                <CardHeader
-                  className="cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200"
+              <div key={index} className="border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-card overflow-hidden">
+                <button
+                  className="w-full px-6 py-4 text-left hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200 flex justify-between items-center"
                   onClick={() => toggleFaq(index)}
                 >
-                  <div className="flex justify-between items-center">
-                    <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">{faq.question}</CardTitle>
-                    <ChevronDown
-                      className={`h-5 w-5 text-gray-500 dark:text-gray-400 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`}
-                    />
-                  </div>
-                </CardHeader>
+                  <span className="font-semibold text-gray-900 dark:text-white pr-4">{faq.question}</span>
+                  <ChevronDown
+                    className={`h-5 w-5 text-gray-500 dark:text-gray-400 transition-transform duration-300 flex-shrink-0 ${openFaq === index ? 'rotate-180' : ''}`}
+                  />
+                </button>
                 {openFaq === index && (
-                  <CardContent className="pt-0 animate-in slide-in-from-top-2 duration-300">
+                  <div className="px-6 pb-4 animate-in slide-in-from-top-2 duration-300">
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{faq.answer}</p>
-                  </CardContent>
+                  </div>
                 )}
-              </Card>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative py-20 overflow-hidden">
+      {/* CTA Section - Compact and prominent */}
+      <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 bg-[#5F2B8D] dark:bg-[#5F2B8D]"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#5F2B8D]/90 to-[#5F2B8D] dark:from-[#9333EA]/90 dark:to-[#9333EA]"></div>
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-        
-        <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+
+        <div className="relative max-w-4xl mx-auto text-center px-6 lg:px-8">
           <div className="space-y-8">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white">
-              Ready to Turn Your Idea
-              <span className="block mt-2">Into Reality?</span>
-            </h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Join hundreds of founders who have successfully launched their startups with Founderoo's support.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                Ready to Turn Your Idea Into Reality?
+              </h2>
+              <p className="text-lg text-white/90 max-w-2xl mx-auto">
+                Join hundreds of founders who have successfully launched their startups with Founderoo's support.
+              </p>
+            </div>
+            
+            {/* Primary CTA with enhanced prominence */}
+            <div className="flex justify-center py-4">
               <button
                 onClick={() => navigate("/register")}
-                className="group relative overflow-hidden rounded-xl bg-white px-8 py-4 text-lg font-semibold text-[#5F2B8D] dark:text-[#5F2B8D] shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-1 hover:bg-[#FFD64A]"
+                className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold px-8 py-4 rounded-xl text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
-                <div className="absolute inset-0 bg-gray-50 transition-transform duration-200 group-hover:translate-x-full"></div>
-                <span className="relative flex items-center gap-2">
-                  Pay ₹499 & Apply Now
-                  <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
-                </span>
+                Apply Now
+                <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
               </button>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center items-center mt-8">
+            
+            <div className="flex flex-wrap gap-6 justify-center items-center text-sm">
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-white/90" />
+                <CheckCircle className="h-4 w-4 text-white/90" />
                 <span className="text-white/90">Personalized Mentorship</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-white/90" />
+                <CheckCircle className="h-4 w-4 text-white/90" />
                 <span className="text-white/90">Expert Network Access</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-white/90" />
+                <CheckCircle className="h-4 w-4 text-white/90" />
                 <span className="text-white/90">Funding Opportunities</span>
               </div>
             </div>

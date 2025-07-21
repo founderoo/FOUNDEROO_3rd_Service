@@ -38,52 +38,63 @@ export default function Dashboard() {
   }, []);
 
   if (loading) {
-    return <div className="container mx-auto py-10">Loading...</div>;
+    return (
+      <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-center min-h-[50vh]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading your dashboard...</p>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="container mx-auto py-10">
-      <div className="flex justify-between items-center mb-8">
-        <div>
-          <h1 className="text-3xl font-bold">Welcome, {userData?.displayName || 'Founder'}!</h1>
-          <p className="text-muted-foreground">Manage your startup journey here.</p>
+    <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6 sm:mb-8">
+        <div className="min-w-0 flex-1">
+          <h1 className="text-2xl sm:text-3xl font-bold truncate">Welcome, {userData?.displayName || 'Founder'}!</h1>
+          <p className="text-muted-foreground text-sm sm:text-base">Manage your startup journey here.</p>
         </div>
-        <Button asChild variant="outline">
-          <Link to="/">Back to Home</Link>
-        </Button>
+        <div className="flex-shrink-0">
+          <Button asChild variant="outline" size="sm" className="w-full sm:w-auto">
+            <Link to="/">Back to Home</Link>
+          </Button>
+        </div>
       </div>
 
       {!userData ? (
-        <Card>
-          <CardHeader>
-            <CardTitle>Complete Your Profile</CardTitle>
-            <CardDescription>Tell us about your startup journey</CardDescription>
+        <Card className="max-w-2xl mx-auto">
+          <CardHeader className="text-center sm:text-left">
+            <CardTitle className="text-xl sm:text-2xl">Complete Your Profile</CardTitle>
+            <CardDescription className="text-sm sm:text-base">Tell us about your startup journey</CardDescription>
           </CardHeader>
-          <CardContent>
-            <p>Please complete the founder questionnaire to get started.</p>
+          <CardContent className="text-center sm:text-left">
+            <p className="text-sm sm:text-base">Please complete the founder questionnaire to get started.</p>
           </CardContent>
-          <CardFooter>
-            <Button asChild>
+          <CardFooter className="flex justify-center sm:justify-start">
+            <Button asChild className="w-full sm:w-auto">
               <Link to="/founder-form">Start Questionnaire</Link>
             </Button>
           </CardFooter>
         </Card>
-       ) : (
-         <div className="space-y-6">
-          <Card className="mb-6">
+      ) : (
+        <div className="space-y-4 sm:space-y-6">
+          <Card>
             <CardHeader>
-              <CardTitle>Startup Journey Progress</CardTitle>
-              <CardDescription>Track your startup application status</CardDescription>
+              <CardTitle className="text-lg sm:text-xl">Startup Journey Progress</CardTitle>
+              <CardDescription className="text-sm sm:text-base">Track your startup application status</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-3 sm:space-y-4">
               <div className="space-y-2">
-                <div className="flex justify-between text-sm">
+                <div className="flex justify-between text-sm sm:text-base">
                   <span>Application Status</span>
                   <span className="font-medium">In Review</span>
                 </div>
-                <Progress value={33} className="h-2" />
-                <div className="grid grid-cols-3 text-xs text-muted-foreground mt-1">
-                  <div>Form Submitted</div>
+                <Progress value={33} className="h-2 sm:h-3" />
+                <div className="grid grid-cols-3 text-xs sm:text-sm text-muted-foreground mt-2">
+                  <div className="text-left">Form Submitted</div>
                   <div className="text-center">Under Review</div>
                   <div className="text-right">Approved</div>
                 </div>
@@ -93,30 +104,30 @@ export default function Dashboard() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Your Startup Vision</CardTitle>
-              <CardDescription>Your responses to the questionnaire</CardDescription>
+              <CardTitle className="text-lg sm:text-xl">Your Startup Vision</CardTitle>
+              <CardDescription className="text-sm sm:text-base">Your responses to the questionnaire</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <h3 className="font-medium">Problem Statement</h3>
-                <p className="text-sm text-muted-foreground">{userData.problemSolving}</p>
+            <CardContent className="space-y-4 sm:space-y-6">
+              <div className="space-y-2">
+                <h3 className="font-medium text-sm sm:text-base">Problem Statement</h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{userData.problemSolving}</p>
               </div>
-              <div>
-                <h3 className="font-medium">Solution Uniqueness</h3>
-                <p className="text-sm text-muted-foreground">{userData.uniqueSolution}</p>
+              <div className="space-y-2">
+                <h3 className="font-medium text-sm sm:text-base">Solution Uniqueness</h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{userData.uniqueSolution}</p>
               </div>
-              <div>
-                <h3 className="font-medium">Future Vision</h3>
-                <p className="text-sm text-muted-foreground">{userData.futureVision}</p>
+              <div className="space-y-2">
+                <h3 className="font-medium text-sm sm:text-base">Future Vision</h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{userData.futureVision}</p>
               </div>
             </CardContent>
-            <CardFooter>
-              <Button variant="outline" asChild>
+            <CardFooter className="flex justify-center sm:justify-start">
+              <Button variant="outline" asChild className="w-full sm:w-auto">
                 <Link to="/founder-form">Update Responses</Link>
               </Button>
             </CardFooter>
           </Card>
-         </div>
+        </div>
       )}
     </div>
   );

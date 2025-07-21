@@ -29,7 +29,7 @@ export function Footer() {
               <h3 className="text-xl font-bold text-white">Founderoo</h3>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              The Operating System for Founders.
+              The Operating System for First Time Founders.
             </p>
             <p className="text-gray-300 text-sm leading-relaxed">
               Building innovative solutions that help Startup grow and thrive in the digital age.
@@ -98,12 +98,12 @@ export function Footer() {
               >
                 Careers
               </a>
-              <span
-                
+              <a href='/blog'
+                target="_blank"
                 className="text-gray-300 hover:text-secondary transition-colors text-sm block"
               >
                 Blog
-              </span>
+              </a>
               <a
                 href="https://www.linkedin.com/newsletters/the-founder-s-signal-7338714487572570114"
                 target="_blank"
