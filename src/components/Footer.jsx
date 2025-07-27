@@ -98,7 +98,7 @@ export function Footer() {
               >
                 Careers
               </a>
-              <a href='/blog'
+              <a href="https://founderooblog.vercel.app"
                 target="_blank"
                 className="text-gray-300 hover:text-secondary transition-colors text-sm block"
               >
