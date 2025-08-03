@@ -74,7 +74,7 @@
 //         const status = getStepStatus(idx, currentStep);
 //         return (
 //           <div className="flex items-center" key={step.label}>
-//             <div className="flex flex-col items-center min-w-[150px] ml-16"> {/* Changed to ml-16 */}
+//             <div className="flex flex-col items-center min-w-[150px] ml-24"> {/* Increased ml-24 for more right shift */}
 //               <span
 //                 className={`w-5 h-5 flex items-center justify-center ${
 //                   status === "completed" ? "bg-green-100 border-green-500" : status === "active" ? "border-purple-600" : "border-gray-200 bg-gray-100"
@@ -124,7 +124,7 @@
 //                   status === "active" ? "bg-purple-50 text-purple-700 font-bold" : "text-gray-700"
 //                 }`}
 //               >
-//                 <span className="flex-1 flex items-center">
+//                 <span className="flex-1 flex items-center justify-center"> {/* Added justify-center */}
 //                   <step.icon className="mr-2 w-4 h-4" />
 //                   {step.label}
 //                 </span>
@@ -531,6 +531,8 @@
 //     </div>
 //   );
 // }
+
+
 import { useState } from "react";
 import Select from 'react-select';
 import Confetti from 'react-confetti';
@@ -606,7 +608,7 @@ function Stepper({ currentStep }) {
         const status = getStepStatus(idx, currentStep);
         return (
           <div className="flex items-center" key={step.label}>
-            <div className="flex flex-col items-center min-w-[150px] ml-24"> {/* Increased ml-24 for more right shift */}
+            <div className="flex flex-col items-center min-w-[150px] ml-32"> {/* Increased to ml-32 for more right shift */}
               <span
                 className={`w-5 h-5 flex items-center justify-center ${
                   status === "completed" ? "bg-green-100 border-green-500" : status === "active" ? "border-purple-600" : "border-gray-200 bg-gray-100"
@@ -617,9 +619,9 @@ function Stepper({ currentStep }) {
               <span
                 className={`mt-0 text-base font-semibold ${
                   status === "active" ? "text-purple-600" : status === "completed" ? "text-green-600" : "text-gray-400"
-                }`}
+                } flex items-center justify-center`} {/* Centered text and icon */}
               >
-                <step.icon className="w-6 h-6 mb-1" /> {/* Icon above label */}
+                <step.icon className="w-6 h-6 mb-1 mr-1" /> {/* Added mr-1 for spacing */}
                 {step.label}
               </span>
             </div>
@@ -656,7 +658,7 @@ function Sidebar({ currentSidebarStep }) {
                   status === "active" ? "bg-purple-50 text-purple-700 font-bold" : "text-gray-700"
                 }`}
               >
-                <span className="flex-1 flex items-center justify-center"> {/* Added justify-center */}
+                <span className="flex-1 flex items-center justify-center text-center"> {/* Centered content */}
                   <step.icon className="mr-2 w-4 h-4" />
                   {step.label}
                 </span>
