@@ -12,8 +12,8 @@ const sidebarSteps = [
 ];
 
 const mainSteps = [
-  { label: "Basic information", icon: FaUser },
-  { label: "Important information", icon: FaInfoCircle },
+  { label: "set up", icon: FaUser },
+  { label: "main information ", icon: FaInfoCircle },
   { label: "About you", icon: FaUserEdit },
   { label: "Completed", icon: FaCheckCircle },
 ];
