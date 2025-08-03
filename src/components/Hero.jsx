@@ -1,3 +1,4 @@
+
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "@/store/auth";
 import { ArrowRight, Layout, MessageSquare, PieChart } from "lucide-react";
@@ -16,6 +17,10 @@ export default function Hero() {
     } else {
       navigate("/register");
     }
+  };
+
+  const handleStartClick = () => {
+    navigate("/form");
   };
 
   return (
@@ -129,26 +134,30 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Efficiency Card - Using brand purple light variant */}
+          {/* Cofounder Matchmaking Card - Using brand purple light variant */}
           <div className="group relative bg-gradient-to-br from-brand-purple-50 to-brand-purple-100 rounded-xl-token overflow-hidden border border-brand-purple-200 shadow-md-token card-hover lg:col-span-3">
             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative card-padding h-full flex flex-col lg:flex-row lg:items-center lg:justify-between min-h-[120px]">
               <div className="lg:flex-1 lg:pr-xl-token">
                 <div className="flex items-center mb-md-token">
                   <h3 className="heading-h3 feature-card-heading mr-md-token">
-                    Efficiency
+                    Cofounder Matchmaking
                   </h3>
                   <div className="w-12 h-12 bg-brand-purple-200 rounded-lg-token flex items-center justify-center group-hover:bg-brand-purple-300 transition-colors duration-300">
                     <Layout className="h-6 w-6 text-brand-purple-600" />
                   </div>
                 </div>
                 <p className="body-text feature-card-text mb-md-token lg:mb-0">
-                  Deliver faster, spend less: 50% savings across time and budget.
+                  Identifying someone who shares your vision and complements your skills to build a successful startup.
                 </p>
               </div>
               <div className="flex items-center text-brand-purple-600 font-semibold-token group-hover:translate-x-2 transition-transform duration-300 lg:flex-shrink-0">
-                <span className="mr-3">Start Saving</span>
-                <ArrowRight className="h-4 w-4" />
+                <button
+                  onClick={handleStartClick}
+                  className="bg-brand-purple-200 hover:bg-brand-purple-300 px-10 py-3 w-48 rounded-lg transition-colors duration-300 mr-12 ml-4"
+                >
+                  Start
+                </button>
               </div>
             </div>
           </div>
