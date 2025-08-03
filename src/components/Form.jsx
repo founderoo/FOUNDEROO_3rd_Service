@@ -451,23 +451,26 @@ export default function Form() {
           )}
 
           {/* About you STEP */}
-          {/* About you STEP */}
 {step === 2 && (
-  <div className="bg-white border border-purple-200 rounded-lg shadow-sm mb-4 p-6 w-full max-w-4xl mx-auto">
-    <h2 className="text-lg font-bold mb-4 text-purple-800">About you</h2>
-    <label className="block text-lg font-semibold mb-2">
-      Tell us about yourself, your achievements, contributions, or anything that best showcases you:
+  <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-md w-full max-w-4xl mx-auto mb-6">
+    <h2 className="text-xl font-semibold text-gray-800 mb-4">About You</h2>
+    
+    <label htmlFor="aboutYou" className="block text-gray-700 font-medium mb-2">
+      Tell us about yourself, your achievements, contributions, or anything that best showcases you
     </label>
+    
     <textarea
+      id="aboutYou"
       name="aboutYou"
       value={formData.aboutYou}
       onChange={handleChange}
-      rows={10}
-      placeholder="Describe your achievements, your journey, contributions, notable experiences etc..."
-      className="w-full p-4 border border-gray-300 rounded-md text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+      rows={7}
+      placeholder="Describe your achievements, your journey, contributions, notable experiences, etc..."
+      className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
     />
   </div>
 )}
+
 
 
           {/* "Completed" step and Modal */}
