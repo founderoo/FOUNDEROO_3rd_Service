@@ -5,8 +5,8 @@ import Confetti from 'react-confetti';
 import { FaUser, FaInfoCircle, FaUserEdit, FaCheckCircle, FaCheck } from 'react-icons/fa'; // Importing required icons
 
 const sidebarSteps = [
-  { label: "Basic information", icon: FaUser },
-  { label: "Important information", icon: FaInfoCircle },
+  { label: "set up", icon: FaUser },
+  { label: "main information", icon: FaInfoCircle },
   { label: "About you", icon: FaUserEdit },
   { label: "Completed", icon: FaCheckCircle },
 ];
