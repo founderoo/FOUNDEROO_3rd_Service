@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -17,6 +18,7 @@ import TermsAndConditions from './pages/Terms';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ContactUs from './pages/ContactUs';
 import BlogComponent from './pages/Blog';
+import Form from './components/Form';
 
 function App() {
   const initializeAuthListener = useAuthStore(state => state.initializeAuthListener);
@@ -27,14 +29,12 @@ function App() {
   }, [initializeAuthListener]);
 
   return (
-
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Router>
         <Navbar />
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
-
 
             <Route
               path="/dashboard"
@@ -54,13 +54,13 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/blog" element={<BlogComponent />} />
+            <Route path="/form" element={<Form />} />
           </Routes>
         </main>
         <Footer />
       </Router>
       <Toaster />
     </div>
-
   );
 }
 
