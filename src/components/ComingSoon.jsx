@@ -2,6 +2,7 @@
 
 
 
+
 import React from 'react';
 import { X } from 'lucide-react';
 import Lottie from 'lottie-react';
